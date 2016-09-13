@@ -1,1 +1,1 @@
-# ostoslista
+# Sosiaalinen ostoslista-app
