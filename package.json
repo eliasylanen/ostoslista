@@ -1,4 +1,18 @@
 {
+  "name": "ostoslista",
+  "description": "Social shopping list web-app",
+  "version": "0.0.2",
+  "main": "app/server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pepetopo/ostoslista.git"
+  },
+  "author": "Relavite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pepetopo/ostoslista/issues"
+  },
+  "homepage": "https://github.com/pepetopo/ostoslista#readme",
   "scripts": {
     "build": "babel ./ES6 -d ./scripts"
   },
@@ -11,19 +25,5 @@
     "eslint-plugin-import": "^1.15.0",
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.2.2"
-  },
-  "name": "ostoslista",
-  "description": "## Yleistä ### Kehitys package.json:issa on listattu devDependencyina Babel ja ESLint, näitä suodaan käytettävän kehityksessä.",
-  "version": "0.0.2",
-  "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pepetopo/ostoslista.git"
-  },
-  "author": "Relavite",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pepetopo/ostoslista/issues"
-  },
-  "homepage": "https://github.com/pepetopo/ostoslista#readme"
+  }
 }
