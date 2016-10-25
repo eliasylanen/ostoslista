@@ -1,7 +1,7 @@
 {
   "name": "ostoslista",
   "description": "Social shopping list web-app",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "main": "app/server.js",
   "repository": {
     "type": "git",
