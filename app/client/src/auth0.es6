@@ -1,15 +1,16 @@
 (() => {
-  'use strict';
-
   const lock = new Auth0Lock(
     'jWd5ZBXe4EXRKHYODw3rdcjDucpAnIQq',
     'pepetopo.eu.auth0.com'
   );
+  const btnLogin = document.getElementById('btn_login');
   const btnLogout = document.getElementById('btn_logout');
 
   function showProfileInfo(profile) {
-    document.getElementById('nickname').textContent = profile.nickname;
+    console.log(profile);
+    document.getElementById('nickname').textContent = profile.name;
     btnLogout.style.display = 'block';
+    btnLogin.style.display = 'none';
   }
 
   function retrieveProfile() {
@@ -17,12 +18,10 @@
     if (idToken) {
       lock.getProfile(idToken, (err, profile) => {
         if (err) {
-          alert(
-            `There was an error getting the profile: ${err.message}`
-          );
+          alert(`There was an error getting the profile: ${err.message}`);
+        } else {
+          showProfileInfo(profile);
         }
-      // Display user information
-        showProfileInfo(profile);
       });
     }
   }
@@ -31,9 +30,13 @@
     lock.getProfile(authResult.idToken, (error, profile) => {
       if (error) return;
       localStorage.setItem('id_token', authResult.idToken);
-      // Display user information
+    // Display user information
       showProfileInfo(profile);
     });
+  });
+
+  btnLogin.addEventListener('click', () => {
+    lock.show();
   });
 
   btnLogout.addEventListener('click', () => {
@@ -41,6 +44,5 @@
     window.location.reload();
   });
 
-  if (!localStorage.getItem('id_token')) lock.show();
-  else retrieveProfile();
+  retrieveProfile();
 })();

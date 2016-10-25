@@ -1,14 +1,15 @@
 'use strict';
 
 (function () {
-  'use strict';
-
   var lock = new Auth0Lock('jWd5ZBXe4EXRKHYODw3rdcjDucpAnIQq', 'pepetopo.eu.auth0.com');
+  var btnLogin = document.getElementById('btn_login');
   var btnLogout = document.getElementById('btn_logout');
 
   function showProfileInfo(profile) {
-    document.getElementById('nickname').textContent = profile.nickname;
+    console.log(profile);
+    document.getElementById('nickname').textContent = profile.name;
     btnLogout.style.display = 'block';
+    btnLogin.style.display = 'none';
   }
 
   function retrieveProfile() {
@@ -17,9 +18,9 @@
       lock.getProfile(idToken, function (err, profile) {
         if (err) {
           alert('There was an error getting the profile: ' + err.message);
+        } else {
+          showProfileInfo(profile);
         }
-        // Display user information
-        showProfileInfo(profile);
       });
     }
   }
@@ -33,11 +34,15 @@
     });
   });
 
+  btnLogin.addEventListener('click', function () {
+    lock.show();
+  });
+
   btnLogout.addEventListener('click', function () {
     localStorage.removeItem('id_token');
     window.location.reload();
   });
 
-  if (!localStorage.getItem('id_token')) lock.show();else retrieveProfile();
+  retrieveProfile();
 })();
-//# sourceMappingURL=C:\Git\ostoslista\app\client\src\auth0.js.map
+//# sourceMappingURL=C:\Git\ostoslista\auth0.js.map
