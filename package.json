@@ -14,7 +14,8 @@
   },
   "homepage": "https://github.com/pepetopo/ostoslista#readme",
   "scripts": {
-    "build": "babel ./ES6 -d ./scripts"
+    "build": "babel ./ES6 -d ./scripts",
+	"start": "nodemon app/server.js"
   },
   "devDependencies": {
     "babel-cli": "^6.14.0",
@@ -25,5 +26,12 @@
     "eslint-plugin-import": "^1.15.0",
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.2.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.10",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.11.0"
   }
 }
