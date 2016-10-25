@@ -6,9 +6,60 @@
  * Made By MaterializeCSS.com
  */
 
+/*---------- Material icons ----------*/
+
 .icon-block {
   padding: 0 15px;
 }
+
 .icon-block .material-icons {
 	font-size: inherit;
+}
+
+/*---------- Custom content layout ----------*/
+
+body {
+  background-color: #e0e0e0;
+}
+
+.row .col{
+    padding:0;
+}
+
+.container .row {
+  margin: 0;
+}
+
+.container {
+  float:left;
+  width:60%;
+}
+
+.col {
+  width: 60%;
+}
+
+@media only screen and (max-width: 601px) {
+  .container {
+    width: 100%;
+  }
+  .col {
+    width:100%;
+  }
+}
+
+
+/*---------- Custom tabs ----------*/
+
+.tabs .indicator {
+  background-color:#f5f5f5;
+  heigth: 3px;
+}
+
+.tabs .tab a {
+  color:#f5f5f5;
+}
+
+.tabs .tab a:hover {
+  color: #e0e0e0;
 }
