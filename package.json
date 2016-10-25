@@ -1,4 +1,18 @@
 {
+  "name": "ostoslista",
+  "description": "Social shopping list web-app",
+  "version": "0.0.2",
+  "main": "app/server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pepetopo/ostoslista.git"
+  },
+  "author": "Relavite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pepetopo/ostoslista/issues"
+  },
+  "homepage": "https://github.com/pepetopo/ostoslista#readme",
   "scripts": {
     "build": "babel ./ES6 -d ./scripts"
   },
