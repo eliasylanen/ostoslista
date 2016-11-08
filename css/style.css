@@ -19,7 +19,7 @@
 /*---------- Custom content layout ----------*/
 
 body {
-  background-color:#e0e0e0;
+  background-color: #e0e0e0;
 }
 
 .row .col{
@@ -39,24 +39,19 @@ body {
   width: 60%;
 }
 
-@media only screen and (max-width: 601px) {
-  .container {
-    width: 100%;
-  }
-  .col {
-    width: 100%;
-  }
+/*---------- Custom nav ----------*/
+
+nav {
+  height: 65px;
+  padding: 5px;
+  line-height: 55px;
 }
 
-.brand-logo {
-  left: 0.5rem;
-}
 
 /*---------- Custom tabs ----------*/
 
 .tabs .indicator {
   background-color: #f5f5f5;
-  heigth: 3px;
 }
 
 .tabs .tab a {
@@ -83,9 +78,10 @@ body {
   color: #424242;
 }
 
-/*---------- Custom button --------*/
 
-@media only screen and (max-width: 601px) {
+/*---------- Cutom mobile width --------*/
+
+@media only screen and (max-width: 790px) {
   .container {
     width: 100%;
   }
@@ -93,3 +89,60 @@ body {
     width: 100%;
   }
 }
+
+
+/*---------- Custom floating button --------*/
+
+.mobile-button {
+  display:none;
+}
+
+@media only screen and (max-width: 790px) {
+  .mobile-button {
+    display:block
+  }
+  .desktop-button {
+    display:none;
+  }
+}
+
+
+/*---------- Custom icons --------*/
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+
+.nav-buttons i {
+  margin-left: 15px;
+}
+
+
+.app-container {
+  width: 850px;
+  margin-left: 80px;
+}
+
+.app-container.list {
+  background-color: #FAFAFA;
+  padding: 30px;
+}
+
+.item-search input {
+  background-color: #fff;
+}
+
+.nav-item-search {
+  background-color: #fff;
+}
+
+.product-table {
+  margin-top: 2px;
+}
+
+.list-info .material-icons {
+  color: #9E9E9E;
+}
+
