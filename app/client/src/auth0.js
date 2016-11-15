@@ -20,7 +20,7 @@ function showProfileInfo(profile) {
     body: body }).then(function (response) {
     return response.json();
   }).then(function (data) {
-    console.log(data);
+    sessionStorage.setItem('userToken', data);
   });
 }
 
@@ -52,8 +52,9 @@ btnLogin.addEventListener('click', function () {
 
 btnLogout.addEventListener('click', function () {
   localStorage.removeItem('id_token');
+  sessionStorage.removeItem('userToken');
   window.location.reload();
 });
 
 retrieveProfile();
-//# sourceMappingURL=C:\Git\ostoslista\scripts\maps\auth0.js.map
+//# sourceMappingURL=E:\GitHub\ostoslista\scripts\maps\auth0.js.map

@@ -8,8 +8,7 @@ module.exports = {
     "plugins": [
         "react",
         "jsx-a11y",
-        "import",
-        "html"
+        "import"
     ],
     "rules": {
         "react/require-extension": 0,

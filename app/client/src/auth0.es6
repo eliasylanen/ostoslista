@@ -15,12 +15,12 @@ function showProfileInfo(profile) {
     id: profile.clientID,
   });
   fetch('/login', { method: 'POST',
-  headers: {
-    'Content-type': 'application/json',
-  },
-  body })
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body })
     .then(response => response.json())
-    .then(data => { console.log(data); });
+    .then((data) => { sessionStorage.setItem('userToken', data); });
 }
 
 function retrieveProfile() {
@@ -51,6 +51,7 @@ btnLogin.addEventListener('click', () => {
 
 btnLogout.addEventListener('click', () => {
   localStorage.removeItem('id_token');
+  sessionStorage.removeItem('userToken');
   window.location.reload();
 });
 
