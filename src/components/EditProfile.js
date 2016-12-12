@@ -4,7 +4,7 @@ import './EditProfile.css';
 
 class EditProfile extends Component {
   static propTypes = {
-    ...connectProfile.PropTypes
+    ...(connectProfile.PropTypes)
   };
 
   state = {
