@@ -1,29 +1,26 @@
 {
-  "scripts": {
-    "build": "babel ./ES6 -d ./scripts"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.14.0",
-    "babel-preset-latest": "^6.14.0",
-    "babel-preset-react": "^6.11.1",
-    "eslint": "^3.5.0",
-    "eslint-config-airbnb": "^11.1.0",
-    "eslint-plugin-import": "^1.15.0",
-    "eslint-plugin-jsx-a11y": "^2.2.2",
-    "eslint-plugin-react": "^6.2.2"
-  },
   "name": "ostoslista",
-  "description": "## Yleistä ### Kehitys package.json:issa on listattu devDependencyina Babel ja ESLint, näitä suodaan käytettävän kehityksessä.",
-  "version": "0.0.2",
-  "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pepetopo/ostoslista.git"
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "auth0-react-scripts": "0.6.20"
   },
-  "author": "Relavite",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pepetopo/ostoslista/issues"
+  "dependencies": {
+    "auth0-lock": "^10.7.2",
+    "dotenv": "^2.0.0",
+    "events": "^1.1.1",
+    "express": "^4.14.0",
+    "express-jwt": "^5.1.0",
+    "jwt-decode": "^2.1.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-router": "^3.0.0"
   },
-  "homepage": "https://github.com/pepetopo/ostoslista#readme"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3001"
 }
