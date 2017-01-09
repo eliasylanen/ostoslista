@@ -3,6 +3,7 @@ import {Link} from 'react-router';
 import {connectProfile, logout} from '../auth';
 import logo from '../logo.svg';
 import './Site.css';
+import  AppBarExampleIcon from './AppBar'
 
 class Site extends Component {
   static propTypes = {
@@ -13,9 +14,10 @@ class Site extends Component {
   render() {
     return (
       <div className="Site">
+        <AppBarExampleIcon />
         <div className="Site-header">
           <img src={logo} className="Site-logo" alt="logo" />
-          <h2>Welcome to React + Auth0</h2>
+          <h2>Moi</h2>
           {this.renderUserControls()}
         </div>
         <div className="Site-page">
