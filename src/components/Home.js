@@ -4,8 +4,7 @@ import './Home.css';
 import React, {Component} from 'react';
 
 // import CardContainer from './Card';
-import TabsContainer from './Tabs';
-import {connectProfile} from '../auth';
+import Tabs from './Tabs';
 
 class Home extends Component {
   static propTypes = {
@@ -19,7 +18,7 @@ class Home extends Component {
         <div className="Home-intro">
           <h2>Welcome to ViinaralliÄpp :-D</h2>
         </div>
-        <TabsContainer />
+        <Tabs />
       </div>
     );
   }

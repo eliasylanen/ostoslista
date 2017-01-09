@@ -1,8 +1,11 @@
 import {Tab, Tabs} from 'material-ui/Tabs';
 
 import React from 'react';
+import {Tabs, Tab} from 'material-ui/Tabs';
 // From https://github.com/oliviertassinari/react-swipeable-views
 import SwipeableViews from 'react-swipeable-views';
+// Onko tää ok
+import Card from './Card';
 
 const styles = {
   headline: {
@@ -16,7 +19,7 @@ const styles = {
   },
 };
 
-export default class TabsContainer extends React.Component {
+export default class TabsExampleSwipeable extends React.Component {
 
   constructor(props) {
     super(props);
@@ -38,23 +41,20 @@ export default class TabsContainer extends React.Component {
           onChange={this.handleChange}
           value={this.state.slideIndex}
         >
-          <Tab label="Tab One" value={0} />
-          <Tab label="Tab Two" value={1} />
-          <Tab label="Tab Three" value={2} />
+          <Tab label="Omat listat" value={0} />
+          <Tab label="Vastaanotetut listat" value={1} />
         </Tabs>
         <SwipeableViews
           index={this.state.slideIndex}
           onChangeIndex={this.handleChange}
         >
           <div>
-            <h2 style={styles.headline}>Tabs with slide effect</h2>
-            Swipe to see the next slide.<br />
+            <h2 style={styles.headline}>Täs tars olla omia listoja</h2>
+            <Card />
           </div>
           <div style={styles.slide}>
-            slide n°2
-          </div>
-          <div style={styles.slide}>
-            slide n°3
+            <h2 style={styles.headline}>Täs tars olla vastaanotettuja listoja</h2>
+            <Card />
           </div>
         </SwipeableViews>
       </div>

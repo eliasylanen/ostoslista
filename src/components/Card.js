@@ -5,8 +5,9 @@ import FlatButton from 'material-ui/FlatButton';
 const CardContainer = () => (
   <Card>
     <CardHeader
-      title="Without Avatar"
-      subtitle="Subtitle"
+      title="Listan nimi"
+      subtitle="Listan omistajan nimi"
+      titleColor= "red"
       actAsExpander={true}
       showExpandableButton={true}
     />
