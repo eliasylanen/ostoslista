@@ -3,7 +3,7 @@ import {connectProfile} from '../auth';
 // import {Link} from 'react-router';
 import './Home.css';
 // import CardContainer from './Card';
-import TabsExampleSimple from './Tabs';
+import Tabs from './Tabs';
 
 class Home extends Component {
   static propTypes = {
@@ -17,7 +17,7 @@ class Home extends Component {
         <div className="Home-intro">
           <h2>Welcome to ViinaralliÄpp :-D</h2>
         </div>
-        <TabsExampleSimple />
+        <Tabs />
       </div>
     );
   }
