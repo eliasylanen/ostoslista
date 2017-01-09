@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-  <title>Starter Template - Materialize</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Ostoslista</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="css/edit.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-
 <body>
   <nav class="teal darken-2" role="navigation">
     <div class="nav-wrapper container">
-      <div class="app-container nav">
         <a id="logo-container" href="#" class="brand-logo left">Logo</a>
-        <div class="nav-buttons">
+        <div class="mobile-buttons">
           <a class="add-person">
             <i class="material-icons">person_add</i>
           </a>
@@ -29,66 +25,76 @@
             <i class="material-icons">delete</i>
           </a>
         </div>
-      </div>
     </div>
   </nav>
-  <!-- <div class="row teal">
-        <div class="col">
-          <ul class="tabs teal">
-            <li class="tab col s6"><a class="active" href="#test1">OMAT LISTAT</a></li>
-            <li class="tab col s6"><a href="#test2">VASTAANOTETUT LISTAT</a></li>
-          </ul>
-        </div>
-      </div> -->
-  <div class="app-container list">
-  <div class="row list-info">
-    <h4>Listan nimi <i class="material-icons">edit</i></h4>
-    <p class="shared-with-info">Jaettu: </p>
+  <div class="row teal">
   </div>
-  <div class="row">
-    <nav class="nav-item-search">
-      <div class="nav-wrapper item-search">
-        <form>
-          <div class="input-field">
-            <input id="search" placeholder="Lisää tuote" type="search" required>
-            <i class="material-icons">close</i>
-          </div>
-        </form>
+  <div class="container">
+      <div class="row list-info">
+        <h4>Listan nimi
+          <a class="edit-list">
+            <i class="material-icons">edit</i>
+          </a>
+        </h4>
+        <p class="shared-with-info">Jaettu: </p>
       </div>
-    </nav>
-  </div>
-  <div class="row">
-    <table class="responsive-table striped product-table">
-      <thead>
-        <tr>
-          <th data-field="id">Tuote</th>
-          <th data-field="name">Määrä</th>
-          <th data-field="price">Yht.</th>
-          <th data-field="price">Poista</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>Alvin</td>
-          <td>Eclair</td>
-          <td>$0.87</td>
-          <td><i class="material-icons">close</i></td>
-        </tr>
-        <tr>
-          <td>Alan</td>
-          <td>Jellybean</td>
-          <td>$3.76</td>
-          <td><i class="material-icons">close</i></td>
-        </tr>
-        <tr>
-          <td>Jonathan</td>
-          <td>Lollipop</td>
-          <td>$7.00</td>
-          <td><i class="material-icons">close</i></td>
-        </tr>
-      </tbody>
-    </table>
+      <div class="row">
+        <nav class="nav-item-search">
+          <div class="nav-wrapper item-search">
+            <form>
+              <div class="input-field">
+                <input id="search" placeholder="Lisää tuote" type="search" required>
+                <i class="material-icons">close</i>
+              </div>
+            </form>
+          </div>
+        </nav>
+      </div>
+      <div class="row">
+        <table class="responsive-table striped product-table">
+          <thead>
+            <tr>
+              <th data-field="id">Tuote</th>
+              <th data-field="name">Määrä</th>
+              <th data-field="price">Yht.</th>
+              <th data-field="price">Poista</th>
+            </tr>
+          </thead>
+    
+          <tbody>
+            <tr>
+              <td>Alvin</td>
+              <td>Eclair</td>
+              <td>$0.87</td>
+              <td>
+                <a class="delete-item">
+                  <i class="material-icons">close</i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Alan</td>
+              <td>Jellybean</td>
+              <td>$3.76</td>
+              <td>
+                <a class="delete-item">
+                  <i class="material-icons">close</i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Jonathan</td>
+              <td>Lollipop</td>
+              <td>$7.00</td>
+              <td>
+                <a class="delete-item">
+                  <i class="material-icons">close</i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
   </div>
   <div class="desktop-buttons">
     <div class="add-person-desktop">
@@ -100,11 +106,6 @@
     <div class="delete-desktop">
       <a class="btn-floating btn-large waves-effect waves-light deep-purple darken-2"><i class="material-icons">delete</i></a>
     </div>
-  </div>
-  <br><br>
-  </div>
-  </div>
-  </div>
   </div>
 
   <!--  Scripts-->
