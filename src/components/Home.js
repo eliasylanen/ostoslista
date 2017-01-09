@@ -1,9 +1,11 @@
-import React, {Component} from 'react';
-import {connectProfile} from '../auth';
 // import {Link} from 'react-router';
 import './Home.css';
+
+import React, {Component} from 'react';
+
 // import CardContainer from './Card';
-import TabsExampleSimple from './Tabs';
+import TabsContainer from './Tabs';
+import {connectProfile} from '../auth';
 
 class Home extends Component {
   static propTypes = {
@@ -17,10 +19,10 @@ class Home extends Component {
         <div className="Home-intro">
           <h2>Welcome to ViinaralliÄpp :-D</h2>
         </div>
-        <TabsExampleSimple />
+        <TabsContainer />
       </div>
     );
   }
 }
 
-export default Home;
+export default connectProfile(Home);

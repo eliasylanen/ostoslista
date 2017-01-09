@@ -1,5 +1,6 @@
-import React from 'react';
 import AppBar from 'material-ui/AppBar';
+import FontIcon from 'material-ui/FontIcon';
+import React from 'react';
 
 /**
  * A simple example of `AppBar` with an icon on the right.
@@ -9,7 +10,7 @@ const AppBarExampleIcon = () => (
   <AppBar
     title="Ostoslista"
     showMenuIconButton={false}
-    iconClassNameRight="muidocs-icon-navigation-expand-more"
+    iconElementRight={<FontIcon className="material-icons">home</FontIcon>}
   />
 );
 
