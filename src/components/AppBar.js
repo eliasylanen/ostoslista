@@ -1,6 +1,8 @@
 import AppBar from 'material-ui/AppBar';
 import FontIcon from 'material-ui/FontIcon';
 import React from 'react';
+import FloatingActionButtonExampleSimple from './FloatingButton'
+
 
 /**
  * A simple example of `AppBar` with an icon on the right.
@@ -10,7 +12,6 @@ const AppBarExampleIcon = () => (
   <AppBar
     title="Ostoslista"
     showMenuIconButton={false}
-    iconElementRight={<FontIcon className="material-icons">home</FontIcon>}
   />
 );
 
