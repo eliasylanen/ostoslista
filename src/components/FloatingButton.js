@@ -3,7 +3,7 @@ import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 
 const style = {
-  marginRight: 20,
+  margin: 10,
 };
 
 /**
@@ -11,7 +11,7 @@ const style = {
  */
 const FloatingActionButtonExampleSimple = () => (
   <div>
-    <FloatingActionButton style={style}>
+    <FloatingActionButton style={style} backgroundColor="#4527a0">
       <ContentAdd />
     </FloatingActionButton>
   </div>

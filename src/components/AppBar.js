@@ -1,6 +1,10 @@
 import AppBar from 'material-ui/AppBar';
 import FontIcon from 'material-ui/FontIcon';
 import React from 'react';
+import FloatingActionButtonExampleSimple from './FloatingButton'
+
+
+import ActionButtonContainer from './ActionButtons';
 
 /**
  * A simple example of `AppBar` with an icon on the right.
@@ -10,6 +14,7 @@ const AppBarExampleIcon = () => (
   <AppBar
     title="Ostoslista"
     showMenuIconButton={false}
+    iconElementRight={<ActionButtonContainer />}
   />
 );
 
