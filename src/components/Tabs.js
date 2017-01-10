@@ -1,5 +1,3 @@
-import {Tab, Tabs} from 'material-ui/Tabs';
-
 import React from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
 // From https://github.com/oliviertassinari/react-swipeable-views

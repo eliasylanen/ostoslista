@@ -7,7 +7,7 @@ const CardContainer = () => (
     <CardHeader
       title="Listan nimi"
       subtitle="Listan omistajan nimi"
-      titleColor= "red"
+      titleColor="red"
       actAsExpander={true}
       showExpandableButton={true}
     />

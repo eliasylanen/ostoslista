@@ -4,6 +4,7 @@ import './Home.css';
 import React, {Component} from 'react';
 
 // import CardContainer from './Card';
+import {connectProfile} from '../auth.js';
 import Tabs from './Tabs';
 
 class Home extends Component {
