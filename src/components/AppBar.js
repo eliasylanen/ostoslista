@@ -10,7 +10,6 @@ const AppBarExampleIcon = () => (
   <AppBar
     title="Ostoslista"
     showMenuIconButton={false}
-    iconElementRight={<FontIcon className="material-icons">home</FontIcon>}
   />
 );
 
