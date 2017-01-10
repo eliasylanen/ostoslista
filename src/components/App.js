@@ -15,7 +15,7 @@ class App extends Component {
           <Route onEnter={requireAuth}>
             {/* Place all authenticated routes here */}
             <Route path="/" component={Home}></Route>
-            <Route path="/:listId" component={List}></Route>
+            <Route path="/lists/:listId" component={List}></Route>
           </Route>
           <Route path="/login" component={Login}></Route>
         </Route>
