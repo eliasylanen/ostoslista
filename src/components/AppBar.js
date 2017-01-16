@@ -1,8 +1,6 @@
 import AppBar from 'material-ui/AppBar';
 import FontIcon from 'material-ui/FontIcon';
 import React from 'react';
-import FloatingActionButtonExampleSimple from './FloatingButton'
-
 
 import ActionButtonContainer from './ActionButtons';
 
