@@ -3,7 +3,7 @@ import {Link} from 'react-router';
 import {connectProfile, logout} from '../auth';
 import logo from '../logo.svg';
 import './Site.css';
-import  AppBarExampleIcon from './AppBar'
+import  AppBarContainer from './AppBar'
 
 class Site extends Component {
   static propTypes = {
@@ -14,10 +14,10 @@ class Site extends Component {
   render() {
     return (
       <div className="Site">
-        <AppBarExampleIcon />
-        <div className="Site-header">
-          {this.renderUserControls()}
-        </div>
+        <AppBarContainer profile={this.props} />
+        {/*<div className="Site-header">*/}
+          {/*this.renderUserControls()*/}
+        {/*</div>*/}
         <div className="Site-page">
           {this.props.children}
         </div>
