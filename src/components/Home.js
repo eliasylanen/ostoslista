@@ -16,9 +16,6 @@ class Home extends Component {
 
     return (
       <div className="Home">
-        <div className="Home-intro">
-          <h2>Welcome to ViinaralliÄpp :-D</h2>
-        </div>
         <Tabs />
       </div>
     );

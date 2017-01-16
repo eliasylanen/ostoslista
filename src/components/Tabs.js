@@ -47,11 +47,11 @@ export default class TabsExampleSwipeable extends React.Component {
           onChangeIndex={this.handleChange}
         >
           <div>
-            <h2 style={styles.headline}>Täs tars olla omia listoja</h2>
+            <h2 style={styles.headline}>Omat listat</h2>
             <Card />
           </div>
           <div style={styles.slide}>
-            <h2 style={styles.headline}>Täs tars olla vastaanotettuja listoja</h2>
+            <h2 style={styles.headline}>Vastaanotetut listat</h2>
             <Card />
           </div>
         </SwipeableViews>
