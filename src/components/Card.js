@@ -22,9 +22,6 @@ const styles = {
     marginBottom: 13,
     paddingBottom: 9,
   },
-  sharedWithPersons: {
-
-  },
 }
 
 const CardContainer = () => (

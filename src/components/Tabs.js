@@ -45,6 +45,7 @@ export default class TabsExampleSwipeable extends React.Component {
           <Tabs
             onChange={this.handleChange}
             value={this.state.slideIndex}
+            style={styles.tabs}
           >
             <Tab label="Omat listat" value={0} />
             <Tab label="Vastaanotetut listat" value={1} />
