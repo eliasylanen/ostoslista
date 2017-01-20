@@ -16,7 +16,7 @@ const styles = {
   },
   card: {
     marginTop: 14,
-  }
+  },
   tabs: {
     marginBottom: 13,
   }
