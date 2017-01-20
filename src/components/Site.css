@@ -1,3 +1,7 @@
+.Site {
+  background-color: #e0e0e0;
+}
+
 .Site-logo {
   animation: Site-logo-spin infinite 20s linear;
   height: 80px;

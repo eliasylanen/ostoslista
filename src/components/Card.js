@@ -11,6 +11,7 @@ import SocialShare from 'material-ui/svg-icons/social/share';
 const styles = {
   card: {
     marginTop: 13,
+    backgroundColor: '#fafafa',
   },
   icon: {
     marginLeft: 15,
