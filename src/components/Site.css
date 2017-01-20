@@ -20,10 +20,6 @@
   margin: 10px auto;
 }
 
-.Site-page {
-  padding: 10px;
-}
-
 @keyframes Site-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
