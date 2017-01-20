@@ -1,10 +1,8 @@
 import React from 'react';
 import FloatingActionButtonExampleSimple from './FloatingButton';
-import DeleteList from './DeleteList';
-import SaveList from './SaveList';
-import AddPerson from './AddPerson';
 import AppBarButtonContainer from './AppBarButtonContainer';
 import './ActionButtons.css';
+import {grey50} from 'material-ui/styles/colors';
 
 function logged(props) {
   if (!localStorage.getItem('profile')) return <h2>Login</h2>;
