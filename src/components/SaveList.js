@@ -4,7 +4,7 @@ import {grey50} from 'material-ui/styles/colors';
 
 const SaveList = () => (
   <div>
-<FontIcon className="material-icons" color={grey50}>save</FontIcon>
+<FontIcon className="material-icons" color={grey50} style={{float: 'right', marginRight: '15px', cursor: 'pointer'}}>save</FontIcon>
   </div>
 );
 

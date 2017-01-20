@@ -13,6 +13,7 @@ const AppBarContainer = (props) => (
     title="Ostoslista"
     showMenuIconButton={false}
     iconElementRight={<ActionButtonContainer profile={props.profile} />}
+    iconStyleRight={{marginRight: 0}}
   />
 );
 

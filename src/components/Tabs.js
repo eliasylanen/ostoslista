@@ -3,6 +3,7 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 // From https://github.com/oliviertassinari/react-swipeable-views
 import SwipeableViews from 'react-swipeable-views';
 import Card from './Card';
+import './Container.css';
 
 const styles = {
   headline: {
@@ -19,7 +20,7 @@ const styles = {
   },
   tabs: {
     marginBottom: 13,
-  }
+  },
 };
 
 export default class TabsExampleSwipeable extends React.Component {
@@ -39,7 +40,14 @@ export default class TabsExampleSwipeable extends React.Component {
 
   render() {
     return (
-      <div>
+      <div>       
+        <Tabs
+          onChange={this.handleChange}
+          value={this.state.slideIndex}
+        >
+          <Tab label="Omat listat" value={0} />
+          <Tab label="Vastaanotetut listat" value={1} />
+        </Tabs>
         <Tabs
           onChange={this.handleChange}
           value={this.state.slideIndex}
@@ -65,6 +73,7 @@ export default class TabsExampleSwipeable extends React.Component {
             <Card />
           </div>
         </SwipeableViews>
+        </div>
       </div>
     );
   }
