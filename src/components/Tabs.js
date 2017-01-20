@@ -19,7 +19,7 @@ const styles = {
   },
   tabs: {
     marginBottom: 13,
-  }
+  },
 };
 
 export default class TabsExampleSwipeable extends React.Component {
