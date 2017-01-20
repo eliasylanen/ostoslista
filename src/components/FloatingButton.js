@@ -11,7 +11,7 @@ const style = {
  */
 const FloatingActionButtonExampleSimple = () => (
   <div>
-    <FloatingActionButton style={style} backgroundColor="#4527a0">
+    <FloatingActionButton style={style} backgroundColor="#512da8">
       <ContentAdd />
     </FloatingActionButton>
   </div>
