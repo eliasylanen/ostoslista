@@ -4,7 +4,7 @@ import SaveList from './SaveList';
 import AddPerson from './AddPerson';
 
 const AppBarButtonContainer = (props) => (
-  <div style={{marginTop: '15px', marginBottom: '15px'}}>
+  <div style={{marginTop: '15px', marginBottom: '60px'}}>
     <DeleteList />
     <SaveList />
     <AddPerson />
