@@ -40,29 +40,27 @@ export default class TabsExampleSwipeable extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="Container">         
+      <div>       
           <Tabs
             onChange={this.handleChange}
             value={this.state.slideIndex}
           >
-            <Tab label="Omat listat" value={0} />
-            <Tab label="Vastaanotetut listat" value={1} />
+            <Tab label="Omat listat" value={0} style = {{backgroundColor: '#009688'}} />
+            <Tab label="Vastaanotetut listat" value={1}  style = {{backgroundColor: '#009688'}}  />
           </Tabs>
         <SwipeableViews
           index={this.state.slideIndex}
           onChangeIndex={this.handleChange}
         >
-          <div>
+          <div className ="Container">
             <h2 style={styles.headline}>Omat listat</h2>
             <Card style={styles.card} />
           </div>
-          <div style={styles.slide}>
+          <div style={styles.slide} className ="Container">
             <h2 style={styles.headline}>Vastaanotetut listat</h2>
             <Card />
           </div>
         </SwipeableViews>
-        </div>
       </div>
     );
   }

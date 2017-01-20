@@ -9,7 +9,7 @@ import ActionButtonContainer from './ActionButtons';
  */
 const AppBarContainer = (props) => (
   <AppBar
-    style={{verticalAlign: 'middle', boxShadow: 'none'}}
+    style={{verticalAlign: 'middle', boxShadow: 'none', backgroundColor: '#00796b'}}
     title="Ostoslista"
     showMenuIconButton={false}
     iconElementRight={<ActionButtonContainer profile={props.profile} />}
