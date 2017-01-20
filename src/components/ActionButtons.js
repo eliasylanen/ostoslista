@@ -11,7 +11,7 @@ function logged(props) {
   return location.pathname.includes('/lists')
   ? <div> 
       {props.profile.name}
-      <img src={props.profile.picture} alt={props.profile.nickname} />
+      <img src={props.profile.picture} alt={props.profile.nickname} style={{borderRadius: '25px'}} />
       <FloatingActionButtonExampleSimple />
     </div>
   : <div> 
