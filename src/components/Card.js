@@ -17,12 +17,12 @@ const CardContainer = () => (
       actAsExpander={true}
       showExpandableButton={true}
     >
-      <SocialShare color={grey500}/>
     </CardHeader>
 
     <CardActions>
-      <ActionDelete color={grey500}/>
-      <ImageEdit color={grey500} />
+      <ActionDelete color={grey500}  style={{marginRight: '15px'}}/>
+      <ImageEdit color={grey500} style={{marginRight: '15px'}}/>
+      <SocialShare color={grey500}/>
     </CardActions>
     <CardText expandable={true}>
       <List
