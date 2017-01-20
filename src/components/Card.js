@@ -8,8 +8,28 @@ import {List, ListItem} from 'material-ui/List';
 import ContentClear from 'material-ui/svg-icons/content/clear';
 import SocialShare from 'material-ui/svg-icons/social/share';
 
+const styles = {
+  card: {
+    marginTop: 13,
+    backgroundColor: '#fafafa',
+  },
+  icon: {
+    marginLeft: 15,
+  },
+  sharedWithText: {
+    fontSize: 12,
+    marginLeft: 14,
+    marginTop: 20,
+    marginBottom: 13,
+    paddingBottom: 9,
+  },
+  sharedWithPersons: {
+
+  },
+}
+
 const CardContainer = () => (
-  <Card>
+  <Card style={styles.card}>
     <CardHeader
       title="Listan nimi"
       subtitle="Listan omistajan nimi"
@@ -20,10 +40,11 @@ const CardContainer = () => (
     </CardHeader>
 
     <CardActions>
-      <ActionDelete color={grey500}  style={{marginRight: '15px'}}/>
-      <ImageEdit color={grey500} style={{marginRight: '15px'}}/>
-      <SocialShare color={grey500}/>
+      <ActionDelete color={grey500}  style={styles.icon} />
+      <ImageEdit color={grey500} style={styles.icon} />
+      <SocialShare color={grey500} style={styles.icon} />
     </CardActions>
+    <p style={styles.sharedWithText}>Jaettu: <span>Elias, Lasse, Susanna</span></p>
     <CardText expandable={true}>
       <List
         style={{
