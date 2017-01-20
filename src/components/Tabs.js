@@ -48,7 +48,7 @@ export default class TabsExampleSwipeable extends React.Component {
           >
             <Tab label="Omat listat" value={0} style = {{backgroundColor: '#009688'}}/>
             <Tab label="Vastaanotetut listat" value={1}  style = {{backgroundColor: '#009688'}}  />
-          </Tabs>
+          </Tabs>          
         <SwipeableViews
           index={this.state.slideIndex}
           onChangeIndex={this.handleChange}
