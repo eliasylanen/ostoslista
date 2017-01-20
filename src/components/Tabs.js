@@ -54,10 +54,14 @@ export default class TabsExampleSwipeable extends React.Component {
         >
           <div className ="Container">
             <h2 style={styles.headline}>Omat listat</h2>
-            <Card style={styles.card} />
+            <Card />
+            <Card />
+            <Card />
           </div>
           <div style={styles.slide} className ="Container">
             <h2 style={styles.headline}>Vastaanotetut listat</h2>
+            <Card />
+            <Card />
             <Card />
           </div>
         </SwipeableViews>
