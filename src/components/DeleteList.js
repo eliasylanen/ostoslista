@@ -3,9 +3,7 @@ import FontIcon from 'material-ui/FontIcon';
 import {grey50} from 'material-ui/styles/colors';
 
 const DeleteList = () => (
-  <div>
-    <FontIcon className="material-icons"color={grey50} style={{float: 'right', cursor: 'pointer'}}>delete</FontIcon>
-  </div>
+  <FontIcon className="material-icons"color={grey50} style={{float: 'right', cursor: 'pointer'}}>delete</FontIcon>
 );
 
 export default DeleteList;
