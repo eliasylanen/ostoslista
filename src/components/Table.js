@@ -8,8 +8,12 @@ import Add from 'material-ui/svg-icons/content/add';
 import Remove from 'material-ui/svg-icons/content/remove';
 
 const styles = {
-  Table: {
-    borderSpacing: 100, 
+  tableHeader: {
+    fontSize: 32,
+    color: (244, 66, 86),
+  },
+  tableRow: {
+    fontSize: 16,
   },
   tableCellNarrow: {
     width: 28,
@@ -89,8 +93,11 @@ export default class TableExampleComplex extends React.Component {
             displaySelectAll={this.state.showCheckboxes}
             adjustForCheckbox={this.state.showCheckboxes}
             enableSelectAll={this.state.enableSelectAll}
+            style={styles.tableHeader}
           >
-            <TableRow>
+            <TableRow
+              style={styles.tableHeader}
+            >
               <TableHeaderColumn tooltip="Poista" style={styles.tableCellNarrow}>Poista</TableHeaderColumn>
               <TableHeaderColumn tooltip="Tuote">Tuote</TableHeaderColumn>
               <TableHeaderColumn tooltip="Määrä">Määrä</TableHeaderColumn>
