@@ -23,11 +23,6 @@ const styles = {
 }
 
 export default class List extends React.Component {
-  constructor() {
-    super();
-    this.state = {textFieldState: null};
-  }
-
   render() {
     return ( 
       <div>
