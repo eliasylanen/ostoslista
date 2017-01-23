@@ -9,13 +9,15 @@ const style = {
 /**
  * Default size and `mini` FABs, in primary (default), `secondary` and `disabled` colors.
  */
-const FloatingButton = () => (
-  <div>
-    <FloatingActionButton style={style} backgroundColor="#512da8">
-      <ContentAdd />
-    </FloatingActionButton>
-  </div>
-);
 
+class FloatingButton extends React.Component {
+    render() {
+        return (<div>
+          <FloatingActionButton style={style} backgroundColor="#512da8">
+            <ContentAdd />
+          </FloatingActionButton>
+        </div>);
+    }
+}
 
 export default FloatingButton;
