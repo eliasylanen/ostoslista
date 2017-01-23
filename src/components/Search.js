@@ -16,12 +16,13 @@ const styles = {
   }
 }
 
-const Search = () => (
+const Search = (props) => (
   <div>
     <div style={styles.searchBarContainer}>
       <div style={styles.searchBar}>
         <TextField style={styles.searchBar}
           hintText="Etsi tuotetta"
+          onChange={props.onChange}
         />
       </div>
     </div>
