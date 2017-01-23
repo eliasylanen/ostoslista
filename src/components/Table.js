@@ -6,8 +6,12 @@ import Add from 'material-ui/svg-icons/content/add';
 import Remove from 'material-ui/svg-icons/content/remove';
 
 const styles = {
-  Table: {
-    borderSpacing: 100, 
+  tableHeader: {
+    fontSize: 32,
+    color: (244, 66, 86),
+  },
+  tableRow: {
+    fontSize: 16,
   },
   tableCellNarrow: {
     width: 28,
@@ -43,9 +47,19 @@ const tableData = [
   },
 ];
 
+function filterData(filter) {
+  return tableData.filter(value => value.product.toLowerCase().includes(filter.toLowerCase()));
+}
+
 export default class TableExampleComplex extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
 
   render() {
+    const data = this.props.filter ? filterData(this.props.filter) : tableData
+
     return (
       <div>
         <Table style={styles.Table} >
@@ -58,11 +72,15 @@ export default class TableExampleComplex extends React.Component {
             </TableRow>
           </TableHeader>
           <TableBody displayRowCheckbox={false} styles={styles.Table} >
-            {tableData.map( (row, index) => (
+            {data.map( (row, index) => (
               <TableRow key={index}>
                 <TableRowColumn style={styles.tableCellNarrow}><ContentClear style={styles.icon}/></TableRowColumn>
                 <TableRowColumn>{row.product}</TableRowColumn>
-                <TableRowColumn style={{marginLeft: '2px'}}>{row.numberOfItems}<Add style={styles.incrementIcons} /><Remove style={styles.incrementIcons} /></TableRowColumn>
+                <TableRowColumn style={{marginLeft: '2px'}}>
+                  <Remove style={styles.incrementIcons} />
+                  {row.numberOfItems}
+                  <Add style={styles.incrementIcons} />
+                </TableRowColumn>
                 <TableRowColumn>{row.sum}</TableRowColumn>
               </TableRow>
               ))}
