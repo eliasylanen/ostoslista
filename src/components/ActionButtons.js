@@ -6,9 +6,8 @@ import MenuItem from 'material-ui/MenuItem';
 import {logout} from '../auth.js';
 
 import AppBarButtonContainer from './AppBarButtonContainer';
-import FloatingActionButtonExampleSimple from './FloatingButton';
 import {grey50} from 'material-ui/styles/colors';
-import FloatingActionButtonExampleSimple from './FloatingButton';
+import FloatingButton from './FloatingButton';
 
 const styles = {
   profile: {
@@ -46,7 +45,7 @@ function logged(props) {
         <MenuItem disabled primaryText={props.profile.name } style={styles.profile} />
         <MenuItem onClick={logout}><FlatButton label="Log out" hoverColor="none" /></MenuItem>
       </IconMenu>
-      <AppBarButtonContainer />
+      <FloatingButton />
     </div>;
 }
 
