@@ -1,6 +1,5 @@
 import React from 'react';
-import TextField from 'material-ui/TextField';
-
+import Search from './Search';
 import Table from './Table';
 import ImageEdit from 'material-ui/svg-icons/image/edit';
 import {grey500} from 'material-ui/styles/colors';
@@ -35,8 +34,8 @@ export default class List extends React.Component {
   render() {
     return ( 
       <div>
-        <h1>{this.props.params.listId}</h1>
-        <h2 style={styles.listName}>Listan nimi <ImageEdit color={grey500}  style={styles.icon} /></h2>
+        <Search onChange={this.handleChange}/>
+        <h2 style={styles.listName}>{this.props.params.listId}</h2>
         <p style={styles.sharedWithText}>Jaettu: 
           <span>Elias, Lasse, Susanna <ImageEdit color={grey500}  style={styles.icon} /></span> 
         </p>

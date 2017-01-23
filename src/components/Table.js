@@ -51,14 +51,19 @@ const tableData = [
   },
 ];
 
+function filterData(filter) {
+  return tableData.filter(value => value.product.toLowerCase().includes(filter.toLowerCase()));
+}
+
 export default class TableExampleComplex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {filter: this.props.filter};
   }
 
 
   render() {
+    const data = this.props.filter ? filterData(this.props.filter) : tableData
+
     return (
       <div>
         <Table style={styles.Table} >
@@ -70,11 +75,9 @@ export default class TableExampleComplex extends React.Component {
               <TableHeaderColumn tooltip="Yht." style={styles.tableHeaderNarrow}>Yht.</TableHeaderColumn>
             </TableRow>
           </TableHeader>
-          <TableBody displayRowCheckbox={false} >
-            {tableData.map( (row, index) => (
-              <TableRow 
-                key={index}
-              >
+          <TableBody displayRowCheckbox={false} styles={styles.Table} >
+            {data.map( (row, index) => (
+              <TableRow key={index}>
                 <TableRowColumn style={styles.tableCellNarrow}><ContentClear style={styles.icon}/></TableRowColumn>
                 <TableRowColumn style={styles.tableCell}>{row.product}</TableRowColumn>
                 <TableRowColumn style={styles.tableCell}>
