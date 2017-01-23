@@ -6,7 +6,6 @@ import MenuItem from 'material-ui/MenuItem';
 import {logout} from '../auth.js';
 
 import AppBarButtonContainer from './AppBarButtonContainer';
-import {grey50} from 'material-ui/styles/colors';
 import FloatingButton from './FloatingButton';
 
 const styles = {
