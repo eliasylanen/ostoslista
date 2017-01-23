@@ -1,5 +1,5 @@
 import React from 'react';
-import TextField from './TextField';
+import Search from './Search';
 import Table from './Table';
 import ImageEdit from 'material-ui/svg-icons/image/edit';
 import {grey500} from 'material-ui/styles/colors';
@@ -26,8 +26,7 @@ export default class List extends React.Component {
   render() {
     return ( 
       <div>
-        <TextField
-              hintText="Hint Text"
+        <Search
         />
         <h2 style={styles.listName}>{this.props.params.listId}</h2>
         <p style={styles.sharedWithText}>Jaettu: 
