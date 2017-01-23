@@ -22,19 +22,24 @@ const styles = {
 }
 
 export default class List extends React.Component {
+  constructor() {
+    super();
+    this.state = {value: null};
+  }
+
+  handleChange = (event) => {
+    this.setState({value: event.target.value});
+  };
 
   render() {
     return ( 
       <div>
-        <Search
-        />
+        <Search />
         <h2 style={styles.listName}>{this.props.params.listId}</h2>
         <p style={styles.sharedWithText}>Jaettu: 
-          <span>Elias, Lasse, Susanna</span> 
-          <ImageEdit color={grey500}  style={styles.icon} />
+          <span>Elias, Lasse, Susanna <ImageEdit color={grey500}  style={styles.icon} /></span> 
         </p>
-        <Table>
-        </Table>
+        <Table filter={this.state.value} />
       </div>
     );
   }

@@ -36,8 +36,8 @@ const CardContainer = () => (
       title="Listan nimi"
       subtitle="Listan omistajan nimi"
       titleColor="#424242"
-      titleStyle = {{fontSize: 16, textTransform: 'uppercase'}}
-      subtitleColor = '#838383'
+      titleStyle={{fontSize: 16, textTransform: 'uppercase'}}
+      subtitleColor='#838383'
       actAsExpander={true}
       showExpandableButton={true}
     >
@@ -56,9 +56,9 @@ const CardContainer = () => (
         }}
         
       >
-        <ListItem style = {styles.listItemStyle} primaryText="Tuote 1" leftIcon={<ContentClear style={styles.icon}/>} />
-        <ListItem style = {styles.listItemStyle} primaryText="Tuote 2" leftIcon={<ContentClear style={styles.icon}/>} />
-        <ListItem style = {styles.listItemStyle} primaryText="Tuote 3" leftIcon={<ContentClear style={styles.icon}/>} />
+        <ListItem style={styles.listItemStyle} primaryText="Tuote 1" leftIcon={<ContentClear style={styles.icon}/>} />
+        <ListItem style={styles.listItemStyle} primaryText="Tuote 2" leftIcon={<ContentClear style={styles.icon}/>} />
+        <ListItem style={styles.listItemStyle} primaryText="Tuote 3" leftIcon={<ContentClear style={styles.icon}/>} />
       </List>
     </CardText>
   </Card>
