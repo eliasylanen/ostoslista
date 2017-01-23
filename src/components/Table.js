@@ -44,6 +44,11 @@ const tableData = [
 ];
 
 export default class TableExampleComplex extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {filter: this.props.filter};
+  }
+
 
   render() {
     return (
@@ -62,7 +67,11 @@ export default class TableExampleComplex extends React.Component {
               <TableRow key={index}>
                 <TableRowColumn style={styles.tableCellNarrow}><ContentClear style={styles.icon}/></TableRowColumn>
                 <TableRowColumn>{row.product}</TableRowColumn>
-                <TableRowColumn style={{marginLeft: '2px'}}>{row.numberOfItems}<Add style={styles.incrementIcons} /><Remove style={styles.incrementIcons} /></TableRowColumn>
+                <TableRowColumn style={{marginLeft: '2px'}}>
+                  <Remove style={styles.incrementIcons} />
+                  {row.numberOfItems}
+                  <Add style={styles.incrementIcons} />
+                </TableRowColumn>
                 <TableRowColumn>{row.sum}</TableRowColumn>
               </TableRow>
               ))}

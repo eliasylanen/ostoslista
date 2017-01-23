@@ -26,8 +26,8 @@ function logged(props) {
   ? <div> 
       <IconMenu
         iconButtonElement={<img src={props.profile.picture} alt={props.profile.nickname} style={styles.avatar} />}
-        anchorOrigin={{horizontal: 'right', vertical: 'top'}}
-        targetOrigin={{horizontal: 'right', vertical: 'bottom'}}
+        anchorOrigin={{horizontal: 'right', vertical: 'bottom'}}
+        targetOrigin={{horizontal: 'right', vertical: 'top'}}
         listStyle={{textAlign: 'center'}}
       >
         <MenuItem disabled primaryText={props.profile.name} style={styles.profile} />
@@ -38,8 +38,8 @@ function logged(props) {
   : <div> 
       <IconMenu
         iconButtonElement={<img src={props.profile.picture} alt={props.profile.nickname} style={styles.avatar} />}
-        anchorOrigin={{horizontal: 'right', vertical: 'top'}}
-        targetOrigin={{horizontal: 'right', vertical: 'bottom'}}
+        anchorOrigin={{horizontal: 'right', vertical: 'bottom'}}
+        targetOrigin={{horizontal: 'right', vertical: 'top'}}
         listStyle={{textAlign: 'center'}}
       >
         <MenuItem disabled primaryText={props.profile.name } style={styles.profile} />

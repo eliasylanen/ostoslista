@@ -25,7 +25,7 @@ const styles = {
 export default class List extends React.Component {
   constructor() {
     super();
-    this.state = {value: 'test'};
+    this.state = {value: null};
   }
 
   handleChange = (event) => {
