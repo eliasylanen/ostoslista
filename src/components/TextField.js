@@ -8,7 +8,6 @@ const TextFieldExampleSimple = () => (
     /><br />
     <br />
   </div>
-  
 );
 
 export default TextFieldExampleSimple;

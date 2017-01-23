@@ -23,15 +23,13 @@ const styles = {
 
 export default class List extends React.Component {
 
-
   render() {
     return ( 
       <div>
-        <h1>{this.props.params.listId}</h1>
         <TextField
               hintText="Hint Text"
         />
-        <h2 style={styles.listName}>Listan nimi</h2>
+        <h2 style={styles.listName}>{this.props.params.listId}</h2>
         <p style={styles.sharedWithText}>Jaettu: 
           <span>Elias, Lasse, Susanna</span> 
           <ImageEdit color={grey500}  style={styles.icon} />
