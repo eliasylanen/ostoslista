@@ -36,6 +36,7 @@ export default class List extends React.Component {
     return ( 
       <div>
         <h1>{this.props.params.listId}</h1>
+        <TextField hintText="Hint Text" onChange={this.handleChange}/>
         <h2 style={styles.listName}>Listan nimi <ImageEdit color={grey500}  style={styles.icon} /></h2>
         <p style={styles.sharedWithText}>Jaettu: 
           <span>Elias, Lasse, Susanna <ImageEdit color={grey500}  style={styles.icon} /></span> 

@@ -47,14 +47,19 @@ const tableData = [
   },
 ];
 
+function filterData(filter) {
+  return tableData.filter(value => value.product.toLowerCase().includes(filter.toLowerCase()));
+}
+
 export default class TableExampleComplex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {filter: this.props.filter};
   }
 
 
   render() {
+    const data = this.props.filter ? filterData(this.props.filter) : tableData
+
     return (
       <div>
         <Table style={styles.Table} >
@@ -67,7 +72,7 @@ export default class TableExampleComplex extends React.Component {
             </TableRow>
           </TableHeader>
           <TableBody displayRowCheckbox={false} styles={styles.Table} >
-            {tableData.map( (row, index) => (
+            {data.map( (row, index) => (
               <TableRow key={index}>
                 <TableRowColumn style={styles.tableCellNarrow}><ContentClear style={styles.icon}/></TableRowColumn>
                 <TableRowColumn>{row.product}</TableRowColumn>
