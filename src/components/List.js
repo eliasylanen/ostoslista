@@ -1,5 +1,6 @@
 import React from 'react';
-import TextField from './TextField';
+import TextField from 'material-ui/TextField';
+
 import Table from './Table';
 import ImageEdit from 'material-ui/svg-icons/image/edit';
 import {grey500} from 'material-ui/styles/colors';
@@ -22,15 +23,16 @@ const styles = {
 }
 
 export default class List extends React.Component {
-
+  constructor() {
+    super();
+    this.state = {textFieldState: null};
+  }
 
   render() {
     return ( 
       <div>
         <h1>{this.props.params.listId}</h1>
-        <TextField
-              hintText="Hint Text"
-        />
+        <TextField hintText="Hint Text" />
         <h2 style={styles.listName}>Listan nimi</h2>
         <p style={styles.sharedWithText}>Jaettu: 
           <span>Elias, Lasse, Susanna</span> 
