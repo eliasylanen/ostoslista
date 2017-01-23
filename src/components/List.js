@@ -23,17 +23,26 @@ const styles = {
 }
 
 export default class List extends React.Component {
+  constructor() {
+    super();
+    this.state = {value: 'test'};
+  }
+
+  handleChange = (event) => {
+    this.setState({value: event.target.value});
+  };
+
   render() {
     return ( 
       <div>
         <h1>{this.props.params.listId}</h1>
-        <TextField hintText="Hint Text" />
+        <TextField hintText="Hint Text" value={this.state.value} onChange={this.handleChange} />
         <h2 style={styles.listName}>Listan nimi</h2>
         <p style={styles.sharedWithText}>Jaettu: 
           <span>Elias, Lasse, Susanna</span> 
           <ImageEdit color={grey500}  style={styles.icon} />
         </p>
-        <Table>
+        <Table filter={this.state.value}>
         </Table>
       </div>
     );

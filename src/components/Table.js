@@ -97,3 +97,7 @@ export default class TableExampleComplex extends React.Component {
     );
   }
 }
+
+Table.propTypes = {
+  filter: React.PropTypes.string,
+}
