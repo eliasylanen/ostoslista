@@ -6,6 +6,7 @@ import FloatingActionButtonExampleSimple from './FloatingButton';
 import AppBarButtonContainer from './AppBarButtonContainer';
 import './ActionButtons.css';
 import {grey50} from 'material-ui/styles/colors';
+import FloatingButton from './FloatingButton';
 
 function logged(props) {
   if (!localStorage.getItem('profile')) return <h2>Login</h2>;
@@ -17,12 +18,12 @@ function logged(props) {
       >
         <MenuItem primaryText="Custom width" />
       </DropDownMenu>
-      <FloatingActionButtonExampleSimple />
+      <AppBarButtonContainer />
     </div>
   : <div> 
       {/*props.profile.name*/} 
       <img src={props.profile.picture} alt={props.profile.nickname} style={{borderRadius: '25px'}} />
-      <AppBarButtonContainer />
+      <FloatingButton />
     </div>;
 }
 
