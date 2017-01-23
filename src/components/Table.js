@@ -3,8 +3,25 @@ import {Table, TableBody, TableFooter, TableHeader, TableHeaderColumn, TableRow,
   from 'material-ui/Table';
 import TextField from 'material-ui/TextField';
 import Toggle from 'material-ui/Toggle';
+import ContentClear from 'material-ui/svg-icons/content/clear';
+import Add from 'material-ui/svg-icons/content/add';
+import Remove from 'material-ui/svg-icons/content/remove';
 
 const styles = {
+  Table: {
+    borderSpacing: 100, 
+  },
+  tableCellNarrow: {
+    width: 28,
+  },
+  icon: {
+    color: '#616161',
+  },
+  incrementIcons: {
+    color: '#424242',
+    width: 17,
+    height: 17,
+  },
   propContainer: {
     width: 200,
     overflow: 'hidden',
@@ -37,12 +54,12 @@ export default class TableExampleComplex extends React.Component {
       fixedHeader: true,
       fixedFooter: true,
       stripedRows: false,
-      showRowHover: true,
+      showRowHover: false,
       selectable: true,
       multiSelectable: true,
       enableSelectAll: true,
       deselectOnClickaway: true,
-      showCheckboxes: true,
+      showCheckboxes: false,
       height: '300px',
     };
   }
@@ -66,6 +83,7 @@ export default class TableExampleComplex extends React.Component {
           fixedFooter={this.state.fixedFooter}
           selectable={this.state.selectable}
           multiSelectable={this.state.multiSelectable}
+          style={styles.Table}
         >
           <TableHeader
             displaySelectAll={this.state.showCheckboxes}
@@ -73,6 +91,7 @@ export default class TableExampleComplex extends React.Component {
             enableSelectAll={this.state.enableSelectAll}
           >
             <TableRow>
+              <TableHeaderColumn tooltip="Poista" style={styles.tableCellNarrow}>Poista</TableHeaderColumn>
               <TableHeaderColumn tooltip="Tuote">Tuote</TableHeaderColumn>
               <TableHeaderColumn tooltip="Määrä">Määrä</TableHeaderColumn>
               <TableHeaderColumn tooltip="Yht.">Yht.</TableHeaderColumn>
@@ -83,11 +102,13 @@ export default class TableExampleComplex extends React.Component {
             deselectOnClickaway={this.state.deselectOnClickaway}
             showRowHover={this.state.showRowHover}
             stripedRows={this.state.stripedRows}
+            styles={styles.Table}
           >
             {tableData.map( (row, index) => (
               <TableRow key={index} selected={row.selected}>
+                <TableRowColumn style={styles.tableCellNarrow}><ContentClear style={styles.icon}/></TableRowColumn>
                 <TableRowColumn>{row.product}</TableRowColumn>
-                <TableRowColumn>{row.numberOfItems}</TableRowColumn>
+                <TableRowColumn style={{marginLeft: '2px'}}>{row.numberOfItems}<Add style={styles.incrementIcons} /><Remove style={styles.incrementIcons} /></TableRowColumn>
                 <TableRowColumn>{row.sum}</TableRowColumn>
               </TableRow>
               ))}

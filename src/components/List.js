@@ -31,10 +31,9 @@ export default class List extends React.Component {
         <TextField
               hintText="Hint Text"
         />
-        <h2 style={styles.listName}>Listan nimi</h2>
+        <h2 style={styles.listName}>Listan nimi <ImageEdit color={grey500}  style={styles.icon} /></h2>
         <p style={styles.sharedWithText}>Jaettu: 
-          <span>Elias, Lasse, Susanna</span> 
-          <ImageEdit color={grey500}  style={styles.icon} />
+          <span>Elias, Lasse, Susanna <ImageEdit color={grey500}  style={styles.icon} /></span> 
         </p>
         <Table>
         </Table>
