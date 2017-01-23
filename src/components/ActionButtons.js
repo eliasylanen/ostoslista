@@ -14,7 +14,8 @@ const styles = {
     cursor: 'initial'
   },
   avatar: {
-    borderRadius: '25px'
+    borderRadius: '25px',
+    cursor: 'pointer',
   }
 }
 import './ActionButtons.css';
@@ -30,7 +31,7 @@ function logged(props) {
         listStyle={{textAlign: 'center'}}
       >
         <MenuItem disabled primaryText={props.profile.name} style={styles.profile} />
-        <MenuItem onClick={logout}><FlatButton label="Log out" /></MenuItem>
+        <MenuItem onClick={logout}><FlatButton label="Log out" hoverColor="none" /></MenuItem>
       </IconMenu>
       <FloatingActionButtonExampleSimple />
     </div>
@@ -42,7 +43,7 @@ function logged(props) {
         listStyle={{textAlign: 'center'}}
       >
         <MenuItem disabled primaryText={props.profile.name } style={styles.profile} />
-        <MenuItem onClick={logout}><FlatButton label="Log out" /></MenuItem>
+        <MenuItem onClick={logout}><FlatButton label="Log out" hoverColor="none" /></MenuItem>
       </IconMenu>
       <AppBarButtonContainer />
     </div>;
