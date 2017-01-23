@@ -9,7 +9,7 @@ const style = {
 /**
  * Default size and `mini` FABs, in primary (default), `secondary` and `disabled` colors.
  */
-const FloatingActionButtonExampleSimple = () => (
+const FloatingButton = () => (
   <div>
     <FloatingActionButton style={style} backgroundColor="#512da8">
       <ContentAdd />
@@ -17,4 +17,5 @@ const FloatingActionButtonExampleSimple = () => (
   </div>
 );
 
-export default FloatingActionButtonExampleSimple;
+
+export default FloatingButton;

@@ -6,15 +6,16 @@ import MenuItem from 'material-ui/MenuItem';
 import {logout} from '../auth.js';
 
 import AppBarButtonContainer from './AppBarButtonContainer';
-import FloatingActionButtonExampleSimple from './FloatingButton';
 import {grey50} from 'material-ui/styles/colors';
+import FloatingButton from './FloatingButton';
 
 const styles = {
   profile: {
     cursor: 'initial'
   },
   avatar: {
-    borderRadius: '25px'
+    borderRadius: '25px',
+    cursor: 'pointer',
   }
 }
 import './ActionButtons.css';
@@ -30,9 +31,9 @@ function logged(props) {
         listStyle={{textAlign: 'center'}}
       >
         <MenuItem disabled primaryText={props.profile.name} style={styles.profile} />
-        <MenuItem onClick={logout}><FlatButton label="Log out" /></MenuItem>
+        <MenuItem onClick={logout}><FlatButton label="Log out" hoverColor="none" /></MenuItem>
       </IconMenu>
-      <FloatingActionButtonExampleSimple />
+      <AppBarButtonContainer />
     </div>
   : <div> 
       <IconMenu
@@ -42,9 +43,9 @@ function logged(props) {
         listStyle={{textAlign: 'center'}}
       >
         <MenuItem disabled primaryText={props.profile.name } style={styles.profile} />
-        <MenuItem onClick={logout}><FlatButton label="Log out" /></MenuItem>
+        <MenuItem onClick={logout}><FlatButton label="Log out" hoverColor="none" /></MenuItem>
       </IconMenu>
-      <AppBarButtonContainer />
+      <FloatingButton />
     </div>;
 }
 
