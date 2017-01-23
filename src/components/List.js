@@ -43,8 +43,7 @@ export default class List extends React.Component {
         <p style={styles.sharedWithText}>Jaettu: 
           <span>Elias, Lasse, Susanna <ImageEdit color={grey500}  style={styles.icon} /></span> 
         </p>
-        <Table filter={this.state.value}>
-        </Table>
+        <Table filter={this.state.value} />
       </div>
     );
   }
