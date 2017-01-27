@@ -21,7 +21,7 @@ const Search = (props) => (
       <div style={styles.searchBar}>
         <TextField style={styles.searchBar}
           hintText="Etsi tuotetta"
-          hintStyle={{paddingLeft: 10}}
+          hintStyle={{paddingLeft: 10, color: '#616161'}}
           onChange={props.onChange}
           underlineShow={false}
           fullWidth={true}
