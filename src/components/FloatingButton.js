@@ -10,7 +10,6 @@ import ContentClear from 'material-ui/svg-icons/content/clear';
 import TextField from 'material-ui/TextField';
 
 const style = {
-  margin: 10,
 };
 
 export default class DialogExampleModal extends React.Component {
