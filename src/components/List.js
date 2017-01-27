@@ -8,9 +8,11 @@ import {grey800} from 'material-ui/styles/colors';
 const styles = {
   listName: {
     color: grey800,
+    paddingLeft: '10px'
   },
   icon: {
     marginLeft: 15,
+    cursor: 'pointer'
   },
   sharedWithText: {
     fontSize: 12,
@@ -36,8 +38,8 @@ export default class List extends React.Component {
       <div>
         <Search onChange={this.handleChange}/>
         <h2 style={styles.listName}>{this.props.params.listId}</h2>
-        <p style={styles.sharedWithText}>Jaettu: 
-          <span>Elias, Lasse, Susanna <ImageEdit color={grey500}  style={styles.icon} /></span> 
+        <p style={styles.sharedWithText}>Jaettu:
+          <span> Elias, Lasse, Susanna <ImageEdit color={grey500}  style={styles.icon} /></span> 
         </p>
         <Table filter={this.state.value} />
       </div>
