@@ -134,10 +134,10 @@ export default class TableExampleComplex extends React.Component {render() {
             displaySelectAll={false}
           >
             <TableRow>
-              <TableHeaderColumn tooltip="Poista" style={styles.tableHeaderNarrow}>Poista</TableHeaderColumn>
-              <TableHeaderColumn tooltip="Tuote" style={styles.tableHeader}>Tuote</TableHeaderColumn>
-              <TableHeaderColumn tooltip="Määrä" style={styles.tableHeader}>Määrä</TableHeaderColumn>
-              <TableHeaderColumn tooltip="Yht." style={styles.tableHeader}>Yht.</TableHeaderColumn>
+              <TableHeaderColumn style={styles.tableHeaderNarrow}>Poista</TableHeaderColumn>
+              <TableHeaderColumn style={styles.tableHeader}>Tuote</TableHeaderColumn>
+              <TableHeaderColumn style={styles.tableHeader}>Määrä</TableHeaderColumn>
+              <TableHeaderColumn style={styles.tableHeader}>Yht.</TableHeaderColumn>
             </TableRow>
           </TableHeader>
           <TableBody displayRowCheckbox={false} styles={styles.Table} >
