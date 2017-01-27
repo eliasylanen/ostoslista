@@ -4,7 +4,7 @@ import ActionDelete from 'material-ui/svg-icons/action/delete';
 import ImageEdit from 'material-ui/svg-icons/image/edit';
 import {List, ListItem} from 'material-ui/List';
 import ContentClear from 'material-ui/svg-icons/content/clear';
-import SocialShare from 'material-ui/svg-icons/social/share';
+import SocialPersonAdd from 'material-ui/svg-icons/social/person-add';
 
 const styles = {
   card: {
@@ -45,7 +45,7 @@ const CardContainer = () => (
     <CardActions>
       <ActionDelete style={styles.icon} />
       <ImageEdit style={styles.icon} />
-      <SocialShare  style={styles.icon} />
+      <SocialPersonAdd style={styles.icon} />
     </CardActions>
     <p style={styles.sharedWithText}>Jaettu: <span>Elias, Lasse, Susanna</span></p>
     <CardText expandable={true}>
