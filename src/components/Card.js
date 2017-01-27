@@ -13,7 +13,8 @@ const styles = {
   },
   icon: {
     marginLeft: 15,
-    color: '#616161',
+    color: '#424242',
+    cursor: 'pointer'
   },
   sharedWithText: {
     fontSize: 12,
@@ -24,8 +25,7 @@ const styles = {
     color: '#838383',
   },
   listItemStyle: {
-    color: '#424242',
-    fontSize: 14,
+    fontSize: 14
   },
 }
 
@@ -34,7 +34,7 @@ const CardContainer = () => (
     <CardHeader
       title="Listan nimi"
       subtitle="Listan omistajan nimi"
-      titleColor="#424242"
+      titleColor="white"
       titleStyle={{fontSize: 16, textTransform: 'uppercase'}}
       subtitleColor='#838383'
       actAsExpander={true}
