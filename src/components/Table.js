@@ -20,6 +20,9 @@ const styles = {
     paddingLeft: 36,
     paddingRight: 0,
   },
+  tableCellAdjustedSum: {
+    paddingLeft: 37,
+  },
   tableHeader: {
     fontSize: 16,
   },
@@ -150,7 +153,7 @@ export default class TableExampleComplex extends React.Component {render() {
                   <Add style={styles.incrementIcons} />
                   <Remove style={styles.incrementIcons} />
                 </TableRowColumn>
-                <TableRowColumn style={styles.tableCellAdjusted}>{row.sum}</TableRowColumn>
+                <TableRowColumn style={styles.tableCellAdjustedSum}>{row.sum}</TableRowColumn>
               </TableRow>
               ))}
           </TableBody>
@@ -160,7 +163,7 @@ export default class TableExampleComplex extends React.Component {render() {
               <TableRowColumn></TableRowColumn>
               <TableRowColumn style={styles.tableHeader}>
                 <div style={styles.totalSumContainer}>
-                  <span style={{fontWeight: "bold"}}>Yhteensä:</span>
+                  <span style={{fontWeight: "bold"}}>Yht:</span>
                   <span style={styles.totalSum}>46,79€</span>
                 </div>
               </TableRowColumn>
