@@ -9,10 +9,9 @@ const styles = {
   },  
   searchBar: {
     borderRadius: '5px',
-    width: '100%',
     backgroundColor: 'white',
     borderStyle: 'none',
-    borderColor: 'white'
+    borderColor: 'white',
   }
 }
 
@@ -22,8 +21,11 @@ const Search = (props) => (
       <div style={styles.searchBar}>
         <TextField style={styles.searchBar}
           hintText="Etsi tuotetta"
+          hintStyle={{paddingLeft: 10}}
           onChange={props.onChange}
           underlineShow={false}
+          fullWidth={true}
+          inputStyle={{padding: '0 10px', boxSizing: 'border-box'}}
         />
       </div>
     </div>
