@@ -5,6 +5,7 @@ import ImageEdit from 'material-ui/svg-icons/image/edit';
 import {List, ListItem} from 'material-ui/List';
 import ContentClear from 'material-ui/svg-icons/content/clear';
 import SocialPersonAdd from 'material-ui/svg-icons/social/person-add';
+import { Link } from 'react-router';
 
 const styles = {
   card: {
@@ -44,17 +45,12 @@ const CardContainer = () => (
 
     <CardActions>
       <ActionDelete style={styles.icon} />
-      <ImageEdit style={styles.icon} />
+      <Link to="/lists/asd"><ImageEdit style={styles.icon} /></Link>
       <SocialPersonAdd style={styles.icon} />
     </CardActions>
     <p style={styles.sharedWithText}>Jaettu: <span>Elias, Lasse, Susanna</span></p>
     <CardText expandable={true}>
-      <List
-        style={{
-          width: '50%',
-        }}
-        
-      >
+      <List>
         <ListItem style={styles.listItemStyle} primaryText="Tuote 1" leftIcon={<ContentClear style={styles.icon}/>} />
         <ListItem style={styles.listItemStyle} primaryText="Tuote 2" leftIcon={<ContentClear style={styles.icon}/>} />
         <ListItem style={styles.listItemStyle} primaryText="Tuote 3" leftIcon={<ContentClear style={styles.icon}/>} />
