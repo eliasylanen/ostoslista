@@ -9,7 +9,10 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
 const styles = {
-  buttonStyle: {
+  CancelButtonStyle: {
+    color: '#d50000',
+  },
+  CreateListButtonStyle: {
     color: 'rgb(0, 150, 136)',
   },
   underlineStyle: {
@@ -33,12 +36,11 @@ export default class DialogExampleModal extends React.Component {
 
   render() {
     const actions = [
-      <FlatButton style ={styles.buttonStyle}
+      <FlatButton style ={styles.CreateListButtonStyle}
         label="Luo lista"
         primary={true}
-        onTouchTap={this.handleClose}
       />,
-      <FlatButton style ={styles.buttonStyle}
+      <FlatButton style ={styles.CancelButtonStyle}
         label="Peruuta"
         primary={true}
         onTouchTap={this.handleClose}
