@@ -19,7 +19,7 @@ const styles = {
     cursor: 'initial'
   },
   avatar: {
-    borderRadius: '25px',
+    borderRadius: '30px',
     cursor: 'pointer',
   }
 }
