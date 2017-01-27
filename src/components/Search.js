@@ -11,7 +11,7 @@ const styles = {
     borderRadius: '5px',
     backgroundColor: 'white',
     borderStyle: 'none',
-    borderColor: 'white',
+    borderColor: 'white'
   }
 }
 
