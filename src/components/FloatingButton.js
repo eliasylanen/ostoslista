@@ -16,6 +16,7 @@ const style = {
 export default class DialogExampleModal extends React.Component {
   state = {
     open: false,
+    position: 'absolute',
   };
 
   handleOpen = () => {

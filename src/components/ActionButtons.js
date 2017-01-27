@@ -1,14 +1,20 @@
 import React from 'react';
+import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 
-import {logout} from '../auth.js';
+import {login, logout} from '../auth.js';
 
 import AppBarButtonContainer from './AppBarButtonContainer';
 import FloatingButton from './FloatingButton';
 
 const styles = {
+  logout: {
+    position: 'relative',
+    top: '50%',
+    transform: 'translateY(-50%)',
+  },
   profile: {
     cursor: 'initial'
   },
@@ -20,7 +26,7 @@ const styles = {
 import './ActionButtons.css';
 
 function logged(props) {
-  if (!localStorage.getItem('profile')) return <h2>Login</h2>;
+  if (!localStorage.getItem('profile')) return <RaisedButton label="Kirjaudu sisään" style={styles.logout} onClick={login} />;
   return location.pathname.includes('/lists')
   ? <div> 
       <IconMenu
