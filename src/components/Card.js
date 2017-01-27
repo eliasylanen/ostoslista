@@ -34,7 +34,7 @@ const CardContainer = () => (
     <CardHeader
       title="Listan nimi"
       subtitle="Listan omistajan nimi"
-      titleColor="white"
+      titleColor="#424242"
       titleStyle={{fontSize: 16, textTransform: 'uppercase'}}
       subtitleColor='#838383'
       actAsExpander={true}
