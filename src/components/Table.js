@@ -48,6 +48,7 @@ const styles = {
     marginLeft: 5,
   },
   totalSumContainer: {
+    marginTop: 14,
     marginLeft: -20,
   },
   propContainer: {
