@@ -6,10 +6,15 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 
-import ContentClear from 'material-ui/svg-icons/content/clear';
 import TextField from 'material-ui/TextField';
 
-const style = {
+const styles = {
+  buttonStyle: {
+    color: 'rgb(0, 150, 136)',
+  },
+  underlineStyle: {
+    borderColor: 'rgb(0, 150, 136)',
+  },
 };
 
 export default class DialogExampleModal extends React.Component {
@@ -28,13 +33,13 @@ export default class DialogExampleModal extends React.Component {
 
   render() {
     const actions = [
-      <FlatButton
+      <FlatButton style ={styles.buttonStyle}
         label="Luo lista"
         primary={true}
         onTouchTap={this.handleClose}
       />,
-      <FlatButton
-        label={<ContentClear />}
+      <FlatButton style ={styles.buttonStyle}
+        label="Peruuta"
         primary={true}
         onTouchTap={this.handleClose}
       />,
@@ -42,16 +47,17 @@ export default class DialogExampleModal extends React.Component {
 
     return (
       <div>
-        <FloatingActionButton label="Modal Dialog" onTouchTap={this.handleOpen}  style={style} backgroundColor="#512da8">
+        <FloatingActionButton label="Modal Dialog" onTouchTap={this.handleOpen} backgroundColor="#512da8">
             <ContentAdd />
         </FloatingActionButton>
         <Dialog
           title="Luo uusi lista"
+          titleStyle = {{color: 'rgb(66, 66, 66)'}}
           actions={actions}
           modal={true}
           open={this.state.open}
         >
-          <TextField 
+  <TextField style={{width:'100%'}} underlineFocusStyle={styles.underlineStyle}
             hintText="Listan nimi"
           />
         </Dialog>
