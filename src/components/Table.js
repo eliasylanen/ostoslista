@@ -4,6 +4,9 @@ import {Table, TableBody, TableFooter, TableHeader, TableHeaderColumn, TableRow,
 import ContentClear from 'material-ui/svg-icons/content/clear';
 import Add from 'material-ui/svg-icons/content/add';
 import Remove from 'material-ui/svg-icons/content/remove';
+import Divider from 'material-ui/Divider';
+import {grey900} from 'material-ui/styles/colors';
+import {red900} from 'material-ui/styles/colors';
 
 const styles = {
   tableHeader: {
@@ -13,8 +16,16 @@ const styles = {
   tableCell: {
     fontSize: 14,
   },
-  tableHeaderNarrow: {
+  tableCellAdjusted: {
+    paddingLeft: 36,
+    paddingRight: 0,
+  },
+  tableHeader: {
     fontSize: 16,
+  },
+  tableHeaderNarrow: {
+    fontSize: 14,
+    width: 18,
   },
   tableCellNarrow: {
     fontSize: 14,
@@ -22,11 +33,19 @@ const styles = {
   },
   icon: {
     color: '#616161',
+    width: 22,
+    height: 22,
   },
   incrementIcons: {
     color: '#424242',
     width: 11,
     height: 11,
+  },
+  totalSum: {
+    marginLeft: 5,
+  },
+  totalSumContainer: {
+    marginLeft: -20,
   },
   propContainer: {
     width: 200,
@@ -39,6 +58,51 @@ const styles = {
 };
 
 const tableData = [
+  {
+    product: 'Sisuviina',
+    numberOfItems: '4',
+    sum: '2,90',
+  },
+  {
+    product: 'Sisuviina',
+    numberOfItems: '4',
+    sum: '2,90',
+  },
+  {
+    product: 'Sisuviina',
+    numberOfItems: '4',
+    sum: '2,90',
+  },
+  {
+    product: 'Sisuviina',
+    numberOfItems: '4',
+    sum: '2,90',
+  },
+  {
+    product: 'Sisuviina',
+    numberOfItems: '4',
+    sum: '2,90',
+  },
+  {
+    product: 'Sisuviina',
+    numberOfItems: '4',
+    sum: '2,90',
+  },
+  {
+    product: 'Sisuviina',
+    numberOfItems: '4',
+    sum: '2,90',
+  },
+  {
+    product: 'Sisuviina',
+    numberOfItems: '4',
+    sum: '2,90',
+  },
+  {
+    product: 'Sisuviina',
+    numberOfItems: '4',
+    sum: '2,90',
+  },
   {
     product: 'Sisuviina',
     numberOfItems: '4',
@@ -60,13 +124,20 @@ export default class TableExampleComplex extends React.Component {render() {
 
     return (
       <div>
-        <Table style={styles.Table} >
-          <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
+        <Table
+           fixedFooter={true}
+           fixedHeader={true}
+           height={300}
+        >
+          <TableHeader 
+            adjustForCheckbox={false} 
+            displaySelectAll={false}
+          >
             <TableRow>
               <TableHeaderColumn tooltip="Poista" style={styles.tableHeaderNarrow}>Poista</TableHeaderColumn>
-              <TableHeaderColumn tooltip="Tuote" style={styles.tableHeaderNarrow}>Tuote</TableHeaderColumn>
-              <TableHeaderColumn tooltip="Määrä" style={styles.tableHeaderNarrow}>Määrä</TableHeaderColumn>
-              <TableHeaderColumn tooltip="Yht." style={styles.tableHeaderNarrow}>Yht.</TableHeaderColumn>
+              <TableHeaderColumn tooltip="Tuote" style={styles.tableHeader}>Tuote</TableHeaderColumn>
+              <TableHeaderColumn tooltip="Määrä" style={styles.tableHeader}>Määrä</TableHeaderColumn>
+              <TableHeaderColumn tooltip="Yht." style={styles.tableHeader}>Yht.</TableHeaderColumn>
             </TableRow>
           </TableHeader>
           <TableBody displayRowCheckbox={false} styles={styles.Table} >
@@ -74,15 +145,33 @@ export default class TableExampleComplex extends React.Component {render() {
               <TableRow key={index}>
                 <TableRowColumn style={styles.tableCellNarrow}><ContentClear style={styles.icon}/></TableRowColumn>
                 <TableRowColumn style={styles.tableCell}>{row.product}</TableRowColumn>
-                <TableRowColumn style={styles.tableCell}>
+                <TableRowColumn style={styles.tableCellAdjusted}>
                   {row.numberOfItems}
                   <Add style={styles.incrementIcons} />
                   <Remove style={styles.incrementIcons} />
                 </TableRowColumn>
-                <TableRowColumn style={styles.tableCell}>{row.sum}</TableRowColumn>
+                <TableRowColumn style={styles.tableCellAdjusted}>{row.sum}</TableRowColumn>
               </TableRow>
               ))}
           </TableBody>
+          <TableFooter>
+            <TableRow>
+              <TableRowColumn></TableRowColumn>
+              <TableRowColumn></TableRowColumn>
+              <TableRowColumn style={styles.tableHeader}>
+                <div style={styles.totalSumContainer}>
+                  <span style={{fontWeight: "bold"}}>Yhteensä:</span>
+                  <span style={styles.totalSum}>46,79€</span>
+                </div>
+              </TableRowColumn>
+            </TableRow>
+            <TableRow>
+              <TableRowColumn 
+                colSpan="3" 
+                style={{textAlign: 'center'}}
+              />
+            </TableRow>
+          </TableFooter>
         </Table>
       </div>
     );
