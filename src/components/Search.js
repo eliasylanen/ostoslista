@@ -23,6 +23,7 @@ const Search = (props) => (
         <TextField style={styles.searchBar}
           hintText="Etsi tuotetta"
           onChange={props.onChange}
+          underlineShow={false}
         />
       </div>
     </div>
