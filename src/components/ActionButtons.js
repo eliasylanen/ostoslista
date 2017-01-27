@@ -30,7 +30,7 @@ function logged(props) {
         listStyle={{textAlign: 'center'}}
       >
         <MenuItem disabled primaryText={props.profile.name} style={styles.profile} />
-        <MenuItem onClick={logout}><FlatButton label="Log out" hoverColor="none" /></MenuItem>
+        <MenuItem onClick={logout}><FlatButton label="Kirjaudu ulos" hoverColor="none" /></MenuItem>
       </IconMenu>
       <AppBarButtonContainer />
     </div>
@@ -42,7 +42,7 @@ function logged(props) {
         listStyle={{textAlign: 'center'}}
       >
         <MenuItem disabled primaryText={props.profile.name } style={styles.profile} />
-        <MenuItem onClick={logout}><FlatButton label="Log out" hoverColor="none" /></MenuItem>
+        <MenuItem onClick={logout}><FlatButton label="Kirjaudu ulos" hoverColor="none" /></MenuItem>
       </IconMenu>
       <FloatingButton />
     </div>;
