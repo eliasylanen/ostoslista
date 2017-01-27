@@ -13,7 +13,7 @@ const styles = {
   icon: {
     marginLeft: 15,
     cursor: 'pointer',
-    color: '#424242'
+    color: '#424242',
   },
   sharedWithText: {
     fontSize: 12,
