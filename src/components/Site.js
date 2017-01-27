@@ -1,6 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {Link} from 'react-router';
-import {connectProfile, logout} from '../auth';
+import {connectProfile} from '../auth';
 import './Site.css';
 import  AppBarContainer from './AppBar'
 
@@ -14,9 +13,6 @@ class Site extends Component {
     return (
       <div className="Site">
         <AppBarContainer profile={this.props} />
-        {/*<div className="Site-header">*/}
-          {/*this.renderUserControls()*/}
-        {/*</div>*/}
         <div className="Site-page">
           {this.props.children}
         </div>

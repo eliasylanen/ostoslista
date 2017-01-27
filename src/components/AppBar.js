@@ -1,5 +1,4 @@
 import AppBar from 'material-ui/AppBar';
-import FontIcon from 'material-ui/FontIcon';
 import React from 'react';
 import ActionButtonContainer from './ActionButtons';
 

@@ -55,14 +55,8 @@ function filterData(filter) {
   return tableData.filter(value => value.product.toLowerCase().includes(filter.toLowerCase()));
 }
 
-export default class TableExampleComplex extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-
-  render() {
-    const data = this.props.filter ? filterData(this.props.filter) : tableData
+export default class TableExampleComplex extends React.Component {render() {
+  const data = this.props.filter ? filterData(this.props.filter) : tableData
 
     return (
       <div>

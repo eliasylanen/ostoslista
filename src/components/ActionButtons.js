@@ -58,4 +58,8 @@ const ActionButtonContainer = (props) => (
   logged(props.profile)
 );
 
+ActionButtonContainer.propTypes = {
+  profile: React.PropTypes.object,
+}
+
 export default ActionButtonContainer;
