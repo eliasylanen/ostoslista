@@ -8,6 +8,8 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 import TextField from 'material-ui/TextField';
 
+import { Link } from 'react-router';
+
 const styles = {
   floatingButton: {
     position: 'fixed',
@@ -41,10 +43,10 @@ export default class DialogExampleModal extends React.Component {
 
   render() {
     const actions = [
-      <FlatButton style ={styles.CreateListButtonStyle}
+      <Link to="/lists/asd"><FlatButton style ={styles.CreateListButtonStyle}
         label="Luo lista"
         primary={true}
-      />,
+      /></Link>,
       <FlatButton style ={styles.CancelButtonStyle}
         label="Peruuta"
         primary={true}
