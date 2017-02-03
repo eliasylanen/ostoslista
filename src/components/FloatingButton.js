@@ -8,6 +8,8 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 import TextField from 'material-ui/TextField';
 
+import { Link } from 'react-router';
+
 const styles = {
   floatingButton: {
     position: 'fixed',
@@ -29,7 +31,6 @@ const styles = {
 export default class DialogExampleModal extends React.Component {
   state = {
     open: false,
-    position: 'absolute',
   };
 
   handleOpen = () => {
@@ -42,10 +43,10 @@ export default class DialogExampleModal extends React.Component {
 
   render() {
     const actions = [
-      <FlatButton style ={styles.CreateListButtonStyle}
+      <Link to="/lists/asd"><FlatButton style ={styles.CreateListButtonStyle}
         label="Luo lista"
         primary={true}
-      />,
+      /></Link>,
       <FlatButton style ={styles.CancelButtonStyle}
         label="Peruuta"
         primary={true}
@@ -55,15 +56,16 @@ export default class DialogExampleModal extends React.Component {
 
     return (
       <div>
-        <FloatingActionButton label="Modal Dialog" onTouchTap={this.handleOpen} backgroundColor="#512da8" style={styles.floatingButton}>
+        <FloatingActionButton label="Dialog" onTouchTap={this.handleOpen} backgroundColor="#512da8" style={styles.floatingButton}>
             <ContentAdd />
         </FloatingActionButton>
         <Dialog
           title="Luo uusi lista"
           titleStyle = {{color: 'rgb(66, 66, 66)'}}
           actions={actions}
-          modal={true}
+          modal={false}
           open={this.state.open}
+          onRequestClose={this.handleClose}
         >
   <TextField style={{width:'100%'}} underlineFocusStyle={styles.underlineStyle}
             hintText="Listan nimi"

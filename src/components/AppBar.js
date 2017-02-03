@@ -1,5 +1,7 @@
 import AppBar from 'material-ui/AppBar';
+import { IndexLink } from 'react-router';
 import React from 'react';
+
 import ActionButtonContainer from './ActionButtons';
 
 
@@ -10,7 +12,7 @@ import ActionButtonContainer from './ActionButtons';
 const AppBarContainer = (props) => (
   <AppBar
     style={{verticalAlign: 'middle', boxShadow: 'none', backgroundColor: '#00796b'}}
-    title="Ostoslista"
+    title={<IndexLink to="/" style={{color: '#F5F5F5', textDecoration: 'none'}}>Ostoslista</IndexLink>}
     showMenuIconButton={false}
     iconElementRight={<ActionButtonContainer profile={props.profile} />}
     iconStyleRight={{margin: '.5rem 0', textAlign: 'right'}}
