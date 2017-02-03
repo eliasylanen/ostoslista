@@ -11,7 +11,17 @@ const styles = {
     borderRadius: '5px',
     backgroundColor: 'white',
     borderStyle: 'none',
-    borderColor: 'white'
+    borderColor: 'white',
+    position: 'relative',
+    paddingLeft: 17,
+    boxSizing: 'border-box'
+  },
+  icon: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    padding: 12,
+    color: '#616161'
   }
 }
 
@@ -27,6 +37,7 @@ const Search = (props) => (
           fullWidth={true}
           inputStyle={{padding: '0 10px', boxSizing: 'border-box'}}
         />
+        <FontIcon className="material-icons" style={styles.icon}>search</FontIcon>
       </div>
     </div>
     <br/>
