@@ -7,6 +7,7 @@ import Remove from 'material-ui/svg-icons/content/remove';
 import Divider from 'material-ui/Divider';
 import {grey900} from 'material-ui/styles/colors';
 import {red900} from 'material-ui/styles/colors';
+import './Table.css'; 
 
 const styles = {
   tableHeader: {
@@ -63,7 +64,7 @@ const styles = {
 
 const tableData = [
   {
-    product: 'Sisuviina',
+    product: 'Sisuviina 40% 70cl 10,00€ ',
     numberOfItems: '4',
     sum: '2,90',
   },
@@ -132,23 +133,25 @@ export default class TableExampleComplex extends React.Component {render() {
            fixedFooter={true}
            fixedHeader={true}
            height={300}
+           className="table-products"
         >
-          <TableHeader 
+          <TableHeader
+            className='table-header'
             adjustForCheckbox={false} 
             displaySelectAll={false}
           >
             <TableRow>
-              <TableHeaderColumn style={styles.tableHeaderNarrow}>Poista</TableHeaderColumn>
-              <TableHeaderColumn style={styles.tableHeader}>Tuote</TableHeaderColumn>
-              <TableHeaderColumn style={styles.tableHeader}>Määrä</TableHeaderColumn>
-              <TableHeaderColumn style={styles.tableHeader}>Yht.</TableHeaderColumn>
+              <TableHeaderColumn className='table-cell-header' style={styles.tableHeaderNarrow}>Poista</TableHeaderColumn>
+              <TableHeaderColumn className='table-cell-header' style={styles.tableHeader}>Tuote</TableHeaderColumn>
+              <TableHeaderColumn className='table-cell-header' style={styles.tableHeader}>Määrä</TableHeaderColumn>
+              <TableHeaderColumn className='table-cell-header' style={styles.tableHeader}>Yht.</TableHeaderColumn>
             </TableRow>
           </TableHeader>
           <TableBody displayRowCheckbox={false} styles={styles.Table} >
             {data.map( (row, index) => (
               <TableRow key={index}>
                 <TableRowColumn style={styles.tableCellNarrow}><ContentClear style={styles.icon}/></TableRowColumn>
-                <TableRowColumn style={styles.tableCell}>{row.product}</TableRowColumn>
+                <TableRowColumn className='table-cell-product' style={styles.tableCell}>{row.product}</TableRowColumn>
                 <TableRowColumn style={styles.tableCellAdjusted}>
                   {row.numberOfItems}
                   <Add style={styles.incrementIcons} />
