@@ -8,7 +8,8 @@ import {grey800} from 'material-ui/styles/colors';
 const styles = {
   listName: {
     color: '#424242',
-    paddingLeft: '10px'
+    paddingLeft: '10px',
+    textTransform: 'uppercase',
   },
   icon: {
     marginLeft: 15,
