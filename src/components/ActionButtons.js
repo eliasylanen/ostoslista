@@ -26,7 +26,7 @@ import './ActionButtons.css';
 
 function logged(props) {
   return !localStorage.getItem('profile')
-    ? <RaisedButton label="Kirjaudu sisään" style={styles.logout} onClick={login} />
+    ? <RaisedButton label="Kirjaudu sisään" onClick={login} style={{marginTop: 4}} />
     : location.pathname.includes('/lists')
       ? <div> 
           <IconMenu
