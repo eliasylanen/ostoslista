@@ -18,21 +18,21 @@ const styles = {
     fontSize: 14,
   },
   tableCellAdjusted: {
-    paddingLeft: 36,
+    paddingLeft: 32,
     paddingRight: 0,
   },
   tableCellAdjustedSum: {
-    paddingLeft: 37,
+    paddingLeft: 24,
   },
   tableHeader: {
     fontSize: 16,
   },
   tableHeaderDelete: {
-    width: 18,
+    width: 1,
   },
   tableCellNarrow: {
     fontSize: 14,
-    width: 18,
+    width: 1,
   },
   icon: {
     color: '#616161',
@@ -43,6 +43,10 @@ const styles = {
     color: '#424242',
     width: 11,
     height: 11,
+  },
+  productPrice: {
+    fontWeight: 'bold',
+    fontSize: 12,
   },
   totalSum: {
     marginLeft: 5,
@@ -63,59 +67,70 @@ const styles = {
 
 const tableData = [
   {
-    product: 'Sisuviina 40% 70cl 10,00€ ',
+    product: 'Sisuviina 40% 70cl',
+    price: '18,09',
     numberOfItems: '4',
-    sum: '2,90',
+    sum: '72,36',
   },
   {
     product: 'Sisuviina',
+    price: '18,09',
     numberOfItems: '4',
-    sum: '2,90',
+    sum: '72,36',
   },
   {
     product: 'Sisuviina',
+    price: '18,09',
     numberOfItems: '4',
-    sum: '2,90',
+    sum: '72,36',
   },
   {
     product: 'Sisuviina',
+    price: '18,09',
     numberOfItems: '4',
-    sum: '2,90',
+    sum: '72,36',
   },
   {
     product: 'Sisuviina',
+    price: '18,09',
     numberOfItems: '4',
-    sum: '2,90',
+    sum: '72,36',
   },
   {
     product: 'Sisuviina',
+    price: '18,09',
     numberOfItems: '4',
-    sum: '2,90',
+    sum: '72,36',
   },
   {
     product: 'Sisuviina',
+    price: '18,09',
     numberOfItems: '4',
-    sum: '2,90',
+    sum: '72,36',
   },
   {
     product: 'Sisuviina',
+    price: '18,09',
     numberOfItems: '4',
-    sum: '2,90',
+    sum: '72,36',
   },
   {
     product: 'Sisuviina',
+    price: '18,09',
     numberOfItems: '4',
-    sum: '2,90',
+    sum: '72,36',
   },
   {
     product: 'Sisuviina',
+    price: '18,09',
     numberOfItems: '4',
-    sum: '2,90',
+    sum: '72,36',
   },
   {
-    product: 'Kurjala',
-    numberOfItems: '24',
-    sum: '18,90',
+    product: 'Karjala IV A 8-pack tölkki',
+    price: '13,92',
+    numberOfItems: '1',
+    sum: '13,92',
   },
 ];
 
@@ -150,7 +165,10 @@ export default class TableExampleComplex extends React.Component {render() {
             {data.map( (row, index) => (
               <TableRow key={index}>
                 <TableRowColumn style={styles.tableCellNarrow}><ContentClear style={styles.icon}/></TableRowColumn>
-                <TableRowColumn className='table-cell-product' style={styles.tableCell}>{row.product}</TableRowColumn>
+                <TableRowColumn className='table-cell-product' style={styles.tableCell}>
+                  <span>{row.product}</span><br />
+                  <span style={styles.productPrice}>{row.price}&nbsp;€</span>
+                </TableRowColumn>
                 <TableRowColumn style={styles.tableCellAdjusted}>
                   {row.numberOfItems}
                   <Add style={styles.incrementIcons} />
