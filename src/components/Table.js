@@ -22,7 +22,7 @@ const styles = {
     paddingRight: 0,
   },
   tableCellAdjustedSum: {
-    paddingLeft: 24,
+    paddingLeft: 35,
   },
   tableHeader: {
     fontSize: 16,
