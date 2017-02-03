@@ -33,8 +33,8 @@ const styles = {
 const CardContainer = () => (
   <Card style={styles.card}>
     <CardHeader
-      title="Listan nimi"
-      subtitle="Listan omistajan nimi"
+      title="Juuson setit"
+      subtitle="Juuso"
       titleColor="#424242"
       titleStyle={{fontSize: 16, textTransform: 'uppercase'}}
       subtitleColor='#838383'
@@ -51,9 +51,9 @@ const CardContainer = () => (
     <p style={styles.sharedWithText}>Jaettu: <span>Elias, Lasse, Susanna</span></p>
     <CardText expandable={true}>
       <List>
-        <ListItem style={styles.listItemStyle} primaryText="Tuote 1" leftIcon={<ContentClear style={styles.icon}/>} />
-        <ListItem style={styles.listItemStyle} primaryText="Tuote 2" leftIcon={<ContentClear style={styles.icon}/>} />
-        <ListItem style={styles.listItemStyle} primaryText="Tuote 3" leftIcon={<ContentClear style={styles.icon}/>} />
+        <ListItem style={styles.listItemStyle} primaryText="Schriracha" leftIcon={<ContentClear style={styles.icon}/>} />
+        <ListItem style={styles.listItemStyle} primaryText="Olvi" leftIcon={<ContentClear style={styles.icon}/>} />
+        <ListItem style={styles.listItemStyle} primaryText="Estrella Salt & Vinegar" leftIcon={<ContentClear style={styles.icon}/>} />
       </List>
     </CardText>
   </Card>

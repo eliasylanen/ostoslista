@@ -9,6 +9,12 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
 const styles = {
+  floatingButton: {
+    position: 'fixed',
+    bottom: 0,
+    right: 0,
+    margin: 24,
+  },
   CancelButtonStyle: {
     color: '#d50000',
   },
@@ -49,7 +55,7 @@ export default class DialogExampleModal extends React.Component {
 
     return (
       <div>
-        <FloatingActionButton label="Modal Dialog" onTouchTap={this.handleOpen} backgroundColor="#512da8">
+        <FloatingActionButton label="Modal Dialog" onTouchTap={this.handleOpen} backgroundColor="#512da8" style={styles.floatingButton}>
             <ContentAdd />
         </FloatingActionButton>
         <Dialog

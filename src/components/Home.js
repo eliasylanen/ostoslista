@@ -5,6 +5,7 @@ import React, {Component} from 'react';
 
 // import CardContainer from './Card';
 import {connectProfile} from '../auth.js';
+import FloatingButton from './FloatingButton';
 import Tabs from './Tabs';
 
 class Home extends Component {
@@ -17,6 +18,7 @@ class Home extends Component {
     return (
       <div className="Home">
         <Tabs />
+        <FloatingButton />
       </div>
     );
   }

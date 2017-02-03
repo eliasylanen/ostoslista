@@ -33,8 +33,8 @@ const styles = {
 const CardContainer = () => (
   <Card style={styles.card}>
     <CardHeader
-      title="Listan nimi"
-      subtitle="Listan omistajan nimi"
+      title="Pepetopon lista"
+      subtitle="Elias"
       titleColor="#424242"
       titleStyle={{fontSize: 16, textTransform: 'uppercase'}}
       subtitleColor='#838383'
@@ -48,12 +48,12 @@ const CardContainer = () => (
       <Link to="/lists/asd"><ImageEdit style={styles.icon} /></Link>
       <SocialPersonAdd style={styles.icon} />
     </CardActions>
-    <p style={styles.sharedWithText}>Jaettu: <span>Elias, Lasse, Susanna</span></p>
+    <p style={styles.sharedWithText}>Jaettu: <span>Juuso, Lasse, Susanna</span></p>
     <CardText expandable={true}>
       <List>
-        <ListItem style={styles.listItemStyle} primaryText="Tuote 1" leftIcon={<ContentClear style={styles.icon}/>} />
-        <ListItem style={styles.listItemStyle} primaryText="Tuote 2" leftIcon={<ContentClear style={styles.icon}/>} />
-        <ListItem style={styles.listItemStyle} primaryText="Tuote 3" leftIcon={<ContentClear style={styles.icon}/>} />
+        <ListItem style={styles.listItemStyle} primaryText="Pepsi 1,5L" leftIcon={<ContentClear style={styles.icon}/>} />
+        <ListItem style={styles.listItemStyle} primaryText="Siipikastike" leftIcon={<ContentClear style={styles.icon}/>} />
+        <ListItem style={styles.listItemStyle} primaryText="Liekkisiivet" leftIcon={<ContentClear style={styles.icon}/>} />
       </List>
     </CardText>
   </Card>

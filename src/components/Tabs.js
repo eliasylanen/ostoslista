@@ -2,7 +2,12 @@ import React from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
 // From https://github.com/oliviertassinari/react-swipeable-views
 import SwipeableViews from 'react-swipeable-views';
-import Card from './Card';
+
+import Card1 from './Card1';
+import Card2 from './Card2';
+import Card3 from './Card3';
+// import FloatingButton from './FloatingButton';
+
 import './Container.css';
 
 const styles = {
@@ -56,15 +61,17 @@ export default class TabsExampleSwipeable extends React.Component {
         >
           <div style={styles.slide} className="Container">
             <h2 style={styles.headline}>Omat listat</h2>
-            <Card />
-            <Card />
-            <Card />
+            <Card1 />
+            <Card2 />
+            <Card3 />
+            {/*<FloatingButton />*/}
           </div>
           <div style={styles.slide} className="Container">
             <h2 style={styles.headline}>Vastaanotetut listat</h2>
-            <Card />
-            <Card />
-            <Card />
+            <Card1 />
+            <Card2 />
+            <Card3 />
+            {/*<FloatingButton />*/}
           </div>
         </SwipeableViews>
       </div>

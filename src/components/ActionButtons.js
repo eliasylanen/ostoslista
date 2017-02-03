@@ -7,7 +7,6 @@ import MenuItem from 'material-ui/MenuItem';
 import {login, logout} from '../auth.js';
 
 import AppBarButtonContainer from './AppBarButtonContainer';
-import FloatingButton from './FloatingButton';
 
 const styles = {
   logout: {
@@ -26,32 +25,33 @@ const styles = {
 import './ActionButtons.css';
 
 function logged(props) {
-  if (!localStorage.getItem('profile')) return <RaisedButton label="Kirjaudu sisään" style={styles.logout} onClick={login} />;
-  return location.pathname.includes('/lists')
-  ? <div> 
-      <IconMenu
-        iconButtonElement={<img src={props.profile.picture} alt={props.profile.nickname} style={styles.avatar} />}
-        anchorOrigin={{horizontal: 'right', vertical: 'bottom'}}
-        targetOrigin={{horizontal: 'right', vertical: 'top'}}
-        listStyle={{textAlign: 'center'}}
-      >
-        <MenuItem disabled primaryText={props.profile.name} style={styles.profile} />
-        <MenuItem onClick={logout}><FlatButton label="Kirjaudu ulos" hoverColor="none" /></MenuItem>
-      </IconMenu>
-      <AppBarButtonContainer />
-    </div>
-  : <div> 
-      <IconMenu
-        iconButtonElement={<img src={props.profile.picture} alt={props.profile.nickname} style={styles.avatar} />}
-        anchorOrigin={{horizontal: 'right', vertical: 'bottom'}}
-        targetOrigin={{horizontal: 'right', vertical: 'top'}}
-        listStyle={{textAlign: 'center'}}
-      >
-        <MenuItem disabled primaryText={props.profile.name } style={styles.profile} />
-        <MenuItem onClick={logout}><FlatButton label="Kirjaudu ulos" hoverColor="none" /></MenuItem>
-      </IconMenu>
-      <FloatingButton />
-    </div>;
+  return !localStorage.getItem('profile')
+    ? <RaisedButton label="Kirjaudu sisään" onClick={login} style={{marginTop: 4}} />
+    : location.pathname.includes('/lists')
+      ? <div> 
+          <IconMenu
+            iconButtonElement={<img src={props.profile.picture} alt={props.profile.nickname} style={styles.avatar} />}
+            anchorOrigin={{horizontal: 'right', vertical: 'bottom'}}
+            targetOrigin={{horizontal: 'right', vertical: 'top'}}
+            listStyle={{textAlign: 'center'}}
+          >
+            <MenuItem disabled primaryText={props.profile.name} style={styles.profile} />
+            <MenuItem onClick={logout}><FlatButton label="Kirjaudu ulos" hoverColor="none" /></MenuItem>
+          </IconMenu>
+          <AppBarButtonContainer />
+        </div>
+      : <div> 
+          <IconMenu
+            iconButtonElement={<img src={props.profile.picture} alt={props.profile.nickname} style={styles.avatar} />}
+            anchorOrigin={{horizontal: 'right', vertical: 'bottom'}}
+            targetOrigin={{horizontal: 'right', vertical: 'top'}}
+            listStyle={{textAlign: 'center'}}
+          >
+            <MenuItem disabled primaryText={props.profile.name } style={styles.profile} />
+            <MenuItem onClick={logout}><FlatButton label="Kirjaudu ulos" hoverColor="none" /></MenuItem>
+          </IconMenu>
+        </div>
+    ;
 }
 
 const ActionButtonContainer = (props) => (
