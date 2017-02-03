@@ -10,6 +10,7 @@ const styles = {
     color: '#424242',
     paddingLeft: '10px',
     textTransform: 'uppercase',
+    fontWeight: 400
   },
   icon: {
     marginLeft: 15,
