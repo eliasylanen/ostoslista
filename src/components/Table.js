@@ -27,8 +27,7 @@ const styles = {
   tableHeader: {
     fontSize: 16,
   },
-  tableHeaderNarrow: {
-    fontSize: 14,
+  tableHeaderDelete: {
     width: 18,
   },
   tableCellNarrow: {
@@ -49,7 +48,7 @@ const styles = {
     marginLeft: 5,
   },
   totalSumContainer: {
-    marginTop: 14,
+    marginBottom: 14,
     marginLeft: -20,
   },
   propContainer: {
@@ -141,7 +140,7 @@ export default class TableExampleComplex extends React.Component {render() {
             displaySelectAll={false}
           >
             <TableRow>
-              <TableHeaderColumn className='table-cell-header' style={styles.tableHeaderNarrow}>Poista</TableHeaderColumn>
+              <TableHeaderColumn className='table-cell-header' style={styles.tableHeaderDelete}></TableHeaderColumn>
               <TableHeaderColumn className='table-cell-header' style={styles.tableHeader}>Tuote</TableHeaderColumn>
               <TableHeaderColumn className='table-cell-header' style={styles.tableHeader}>Määrä</TableHeaderColumn>
               <TableHeaderColumn className='table-cell-header' style={styles.tableHeader}>Yht.</TableHeaderColumn>
