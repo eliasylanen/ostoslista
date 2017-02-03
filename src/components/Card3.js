@@ -45,7 +45,7 @@ const CardContainer = () => (
 
     <CardActions>
       <ActionDelete style={styles.icon} />
-      <Link to="/lists/asd"><ImageEdit style={styles.icon} /></Link>
+      <Link to="/lists/Susannan lääkkeet"><ImageEdit style={styles.icon} /></Link>
       <SocialPersonAdd style={styles.icon} />
     </CardActions>
     <p style={styles.sharedWithText}>Jaettu: <span>Elias, Lasse, Juuso</span></p>
