@@ -67,70 +67,22 @@ const styles = {
 
 const tableData = [
   {
-    product: 'Sisuviina 40% 70cl',
-    price: '18,09',
+    product: 'Pepsi 1,5l',
+    price: '2,50',
     numberOfItems: '4',
-    sum: '72,36',
+    sum: '10',
   },
   {
-    product: 'Sisuviina',
-    price: '18,09',
-    numberOfItems: '4',
-    sum: '72,36',
-  },
-  {
-    product: 'Sisuviina',
-    price: '18,09',
-    numberOfItems: '4',
-    sum: '72,36',
-  },
-  {
-    product: 'Sisuviina',
-    price: '18,09',
-    numberOfItems: '4',
-    sum: '72,36',
-  },
-  {
-    product: 'Sisuviina',
-    price: '18,09',
-    numberOfItems: '4',
-    sum: '72,36',
-  },
-  {
-    product: 'Sisuviina',
-    price: '18,09',
-    numberOfItems: '4',
-    sum: '72,36',
-  },
-  {
-    product: 'Sisuviina',
-    price: '18,09',
-    numberOfItems: '4',
-    sum: '72,36',
-  },
-  {
-    product: 'Sisuviina',
-    price: '18,09',
-    numberOfItems: '4',
-    sum: '72,36',
-  },
-  {
-    product: 'Sisuviina',
-    price: '18,09',
-    numberOfItems: '4',
-    sum: '72,36',
-  },
-  {
-    product: 'Sisuviina',
-    price: '18,09',
-    numberOfItems: '4',
-    sum: '72,36',
-  },
-  {
-    product: 'Karjala IV A 8-pack tölkki',
-    price: '13,92',
+    product: 'Siipikastike',
+    price: '6,40',
     numberOfItems: '1',
-    sum: '13,92',
+    sum: '6,40',
+  },
+  {
+    product: 'Liekkisiivet',
+    price: '2,79',
+    numberOfItems: '2',
+    sum: '5,58',
   },
 ];
 
